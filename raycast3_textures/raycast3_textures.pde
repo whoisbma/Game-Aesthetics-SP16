@@ -70,8 +70,8 @@ int[][] worldMap = new int[][] {
   {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
 };
 
-final int texWidth = 32;
-final int texHeight = 32;
+final int texWidth = 64;
+final int texHeight = 64;
 
 boolean drawTextures = true;
 
@@ -108,6 +108,10 @@ void setup() {
       texture[3][texWidth * y + x] = 256 * xorcolor; //xor green
       texture[4][texWidth * y + x] = 65536 * ycolor; //red gradient
       texture[5][texWidth * y + x] = 128 + 256 * 128 + 65536 * 128; //flat grey texture
+      //texture[0][texWidth * y + x] = color(x*2, y*2, 150);
+      
+      
+      texture[0][texWidth * y + x] = color(random(255));
     }
   }
 

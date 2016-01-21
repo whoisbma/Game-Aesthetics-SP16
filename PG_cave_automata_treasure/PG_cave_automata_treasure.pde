@@ -26,12 +26,12 @@ void draw() {
   //queueFloodFill(floodx, floody);
   //println(floodx + " " + floody);
   //if (floody < ROWS) {
-  //  if (floodx < COLS) {
-  //    floodx++;
-  //  } else {
-  //    floodx = 0;
-  //    floody++;
-  //  }
+  // if (floodx < COLS) {
+  //   floodx++;
+  // } else {
+  //   floodx = 0;
+  //   floody++;
+  // }
   //}
 
   //for (int i = 0; i < ROWS; i++) {
@@ -39,6 +39,14 @@ void draw() {
   //    queueFloodFill(i, j);
   //  }
   //}
+}
+
+void keyPressed() {
+  cellmap = new boolean[COLS][ROWS];
+  treasure = new boolean[COLS][ROWS];
+  initializeRandWorld();
+  cellmap = generateMap();
+  placeTreasure();
 }
 
 boolean[][] generateMap() {
@@ -116,7 +124,7 @@ void drawWorld() {
         //cell open (blue)
         fill(51, 98, 175);
       }
-      if (treasure[i][j]){
+      if (treasure[i][j]) {
         fill(200, 200, 0);
       }
       rect(i * cellSize, j * cellSize, (i * cellSize) + cellSize, (j * cellSize) + cellSize);

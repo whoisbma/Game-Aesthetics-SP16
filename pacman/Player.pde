@@ -105,6 +105,7 @@ class Player {
   }
 
   void move() {
+    checkHasDot();
 
     switch (nextDir) {
     case UP:
@@ -215,7 +216,13 @@ class Player {
     rect(floor(pos.x) * sizeMult, floor(pos.y) * sizeMult, sizeMult, sizeMult);
     fill(c);
     stroke(0);
-    ellipse(pos.x * sizeMult, pos.y * sizeMult, sizeMult, sizeMult);
+    ellipse(pos.x * sizeMult, pos.y * sizeMult, sizeMult/1, sizeMult/1);
     c = color(200, 200, 0);
+  }
+  
+  void checkHasDot() {
+    if (dot[floor(pos.x)][floor(pos.y)] == 1) {
+      dot[floor(pos.x)][floor(pos.y)] = 0;
+    }
   }
 }

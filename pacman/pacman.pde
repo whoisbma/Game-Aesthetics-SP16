@@ -14,7 +14,7 @@ int[][] map = new int[][]{
   {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
 
 void setup() {
-  size(100, 100);
+  size(300, 300);
   sizeMult = width/10;
   pixelDensity(2);
   p = new Player();
@@ -24,6 +24,7 @@ void draw() {
   background(255);
   p.getInput();
   p.move();
+  rectMode(CORNER);
   for (int i = 0; i < map.length; i++) {
     for (int j = 0; j < map[0].length; j++) {
       if (map[i][j] == 1) {

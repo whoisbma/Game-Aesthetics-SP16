@@ -17,21 +17,21 @@ class Player {
     float skipSpace = 0.15;
     switch (d) {
     case UP:
-      return (map[(int)(floor(pos.x))][(int)(pos.y-0.1-0.5)] == 0 &&
-        map[(int)(floor(pos.x-skipSpace))][(int)(pos.y-0.1-0.5)] == 0 &&
-        map[(int)(floor(pos.x+skipSpace))][(int)(pos.y-0.1-0.5)] == 0);
+      return (map[(int)(floor(pos.x))][(int)(pos.y-speed-0.5)] == 0 &&
+        map[(int)(floor(pos.x-skipSpace))][(int)(pos.y-speed-0.5)] == 0 &&
+        map[(int)(floor(pos.x+skipSpace))][(int)(pos.y-speed-0.5)] == 0);
     case DOWN:
-      return (map[(int)(floor(pos.x))][(int)(pos.y+0.1+0.5)] == 0 &&
-        map[(int)(floor(pos.x-skipSpace))][(int)(pos.y+0.1+0.5)] == 0 &&
-        map[(int)(floor(pos.x+skipSpace))][(int)(pos.y+0.1+0.5)] == 0);
+      return (map[(int)(floor(pos.x))][(int)(pos.y+speed+0.5)] == 0 &&
+        map[(int)(floor(pos.x-skipSpace))][(int)(pos.y+speed+0.5)] == 0 &&
+        map[(int)(floor(pos.x+skipSpace))][(int)(pos.y+speed+0.5)] == 0);
     case LEFT:
-      return (map[(int)(pos.x-0.1-0.5)][(int)(floor(pos.y))] == 0 &&
-        map[(int)(pos.x-0.1-0.5)][(int)(floor(pos.y-skipSpace))] == 0 &&
-        map[(int)(pos.x-0.1-0.5)][(int)(floor(pos.y+skipSpace))] == 0);
+      return (map[(int)(pos.x-speed-0.5)][(int)(floor(pos.y))] == 0 &&
+        map[(int)(pos.x-speed-0.5)][(int)(floor(pos.y-skipSpace))] == 0 &&
+        map[(int)(pos.x-speed-0.5)][(int)(floor(pos.y+skipSpace))] == 0);
     case RIGHT:
-      return (map[(int)(pos.x+0.1+0.5)][(int)(floor(pos.y))] == 0 &&
-        map[(int)(pos.x+0.1+0.5)][(int)(floor(pos.y-skipSpace))] == 0 &&
-        map[(int)(pos.x+0.1+0.5)][(int)(floor(pos.y+skipSpace))] == 0);
+      return (map[(int)(pos.x+speed+0.5)][(int)(floor(pos.y))] == 0 &&
+        map[(int)(pos.x+speed+0.5)][(int)(floor(pos.y-skipSpace))] == 0 &&
+        map[(int)(pos.x+speed+0.5)][(int)(floor(pos.y+skipSpace))] == 0);
     default:
       return false;
     }
@@ -41,21 +41,21 @@ class Player {
   boolean spaceEmptyStrict(int d) {
     switch (d) {
     case UP:  
-      return (map[(int)(floor(pos.x))][(int)(pos.y-0.1-0.5)] == 0 &&
-        map[(int)(floor(pos.x-0.45))][(int)(pos.y-0.1-0.5)] == 0 &&
-        map[(int)(floor(pos.x+0.45))][(int)(pos.y-0.1-0.5)] == 0);
+      return (map[(int)(floor(pos.x))][(int)(pos.y-speed-0.5)] == 0 &&
+        map[(int)(floor(pos.x-0.45))][(int)(pos.y-speed-0.5)] == 0 &&
+        map[(int)(floor(pos.x+0.45))][(int)(pos.y-speed-0.5)] == 0);
     case DOWN:
-      return (map[(int)(floor(pos.x))][(int)(pos.y+0.1+0.5)] == 0 &&
-        map[(int)(floor(pos.x-0.45))][(int)(pos.y+0.1+0.5)] == 0 &&
-        map[(int)(floor(pos.x+0.45))][(int)(pos.y+0.1+0.5)] == 0);
+      return (map[(int)(floor(pos.x))][(int)(pos.y+speed+0.5)] == 0 &&
+        map[(int)(floor(pos.x-0.45))][(int)(pos.y+speed+0.5)] == 0 &&
+        map[(int)(floor(pos.x+0.45))][(int)(pos.y+speed+0.5)] == 0);
     case LEFT:
-      return (map[(int)(pos.x-0.1-0.5)][(int)(floor(pos.y))] == 0 &&
-        map[(int)(pos.x-0.1-0.5)][(int)(floor(pos.y-0.45))] == 0 &&
-        map[(int)(pos.x-0.1-0.5)][(int)(floor(pos.y+0.45))] == 0);
+      return (map[(int)(pos.x-speed-0.5)][(int)(floor(pos.y))] == 0 &&
+        map[(int)(pos.x-speed-0.5)][(int)(floor(pos.y-0.45))] == 0 &&
+        map[(int)(pos.x-speed-0.5)][(int)(floor(pos.y+0.45))] == 0);
     case RIGHT:
-      return (map[(int)(pos.x+0.1+0.5)][(int)(floor(pos.y))] == 0 &&
-        map[(int)(pos.x+0.1+0.5)][(int)(floor(pos.y-0.45))] == 0 &&
-        map[(int)(pos.x+0.1+0.5)][(int)(floor(pos.y+0.45))] == 0);
+      return (map[(int)(pos.x+speed+0.5)][(int)(floor(pos.y))] == 0 &&
+        map[(int)(pos.x+speed+0.5)][(int)(floor(pos.y-0.45))] == 0 &&
+        map[(int)(pos.x+speed+0.5)][(int)(floor(pos.y+0.45))] == 0);
     default:
       return false;
     }
@@ -141,23 +141,35 @@ class Player {
       if (spaceEmpty(UP)) {
         pos.y -= speed;
         pos.x = floor(pos.x) + 0.5;
+      } else {
+        pos.x = floor(pos.x) + 0.5;
+        pos.y = floor(pos.y) + 0.5;
       }
       break;
     case DOWN:
       if (spaceEmpty(DOWN)) {
         pos.y += speed;
         pos.x = floor(pos.x) + 0.5;
+      } else {
+        pos.x = floor(pos.x) + 0.5;
+        pos.y = floor(pos.y) + 0.5;
       }
       break;
     case LEFT:
       if (spaceEmpty(LEFT)) {
         pos.x -= speed;
         pos.y = floor(pos.y) + 0.5;
+      } else {
+        pos.x = floor(pos.x) + 0.5;
+        pos.y = floor(pos.y) + 0.5;
       }
       break;
     case RIGHT:
       if (spaceEmpty(RIGHT)) {
         pos.x += speed;
+        pos.y = floor(pos.y) + 0.5;
+      } else {
+        pos.x = floor(pos.x) + 0.5;
         pos.y = floor(pos.y) + 0.5;
       }
       break;
@@ -167,17 +179,20 @@ class Player {
   }
 
   void display() {
-    fill(0,0,255,100);
+    fill(0, 0, 255, 100);
     if (spaceEmptyStrict(UP)) {
       rect(floor(pos.x) * sizeMult, floor(pos.y - 1) * sizeMult, sizeMult, sizeMult);
-    } if (spaceEmptyStrict(DOWN)) {
+    } 
+    if (spaceEmptyStrict(DOWN)) {
       rect(floor(pos.x) * sizeMult, floor(pos.y + 1) * sizeMult, sizeMult, sizeMult);
-    } if (spaceEmptyStrict(RIGHT)) {
+    } 
+    if (spaceEmptyStrict(RIGHT)) {
       rect(floor(pos.x + 1) * sizeMult, floor(pos.y) * sizeMult, sizeMult, sizeMult);
-    } if (spaceEmptyStrict(LEFT)) {
+    } 
+    if (spaceEmptyStrict(LEFT)) {
       rect(floor(pos.x - 1) * sizeMult, floor(pos.y) * sizeMult, sizeMult, sizeMult);
     }
-    
+
     fill(255, 0, 0, 100);
     switch (nextDir) {
     case UP:

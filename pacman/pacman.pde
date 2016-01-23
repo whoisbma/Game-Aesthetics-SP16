@@ -1,8 +1,8 @@
 Player p;
 float sizeMult;
 
-int[][] map = new int[][]{
-  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 
+int[][] map = new int[][] 
+ {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 
   {1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1}, 
   {1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1}, 
   {1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1}, 
@@ -25,7 +25,7 @@ int[][] map = new int[][]{
 int[][] dot = new int[map.length][map[0].length];
 
 void setup() {
-  size(380, 380);
+  size(248, 248);
   sizeMult = width/map.length;
   //pixelDensity(2);
   noSmooth();
@@ -38,6 +38,7 @@ void setup() {
       }
     }
   }
+  
 }
 
 void draw() {

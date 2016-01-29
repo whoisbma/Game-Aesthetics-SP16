@@ -5,11 +5,13 @@ Spring 2016
 
 Instructor: Bryan Ma
 
+#### What is this class?
+
 ![The continuous](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/continuous_discrete.png "The continuous")
 
-*The continuous and the discrete*
+There are crazy powerful tools out there for game development. Ultimately though, behind any apparently continuous 3d space is a grid and discrete mathematics at its core. We’re going to focus on the ABCs of things like representing environments and building mechanics, the real bare structures behind things, and focus on making stuff for and with them. We won’t get distracted by smoke and mirrors, we’re going to deal with the foundations. (We’re going to be very very familiar with 2D arrays to represent data in this class!)
 
-#### What is this class?
+Part of what "game aesthetics" refers to for this class is this core centrality - the truth behind lots and lots of obfuscation and magic tricks. I want us to focus on systems, data, representation, interaction, and programming them well.
 
 **A programming class first and foremost**
 
@@ -39,11 +41,13 @@ There’s two sides of the creative programming coin in some sense: one is don�
 
 #### What kind of aesthetics are you talking about?
 
+First, the above - the core mathematical truths behind simulated experiences of reality. Next,
+
 **Mechanics, Dynamics, Aesthetics**
 
 [![Mechanics Dynamics Aesthetics](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/MDA.png "Mechanics Dynamics Aesthetics")](http://www.cs.northwestern.edu/~hunicke/MDA.pdf)
 
-
+where “aesthetics” is defined as the psychological result of the interaction between the player and a game system - the phenomenological impact of a system on a user. The main idea here is that there can be “beauty” in systems and thus an aesthetic of systems. This is one kind of aesthetics that we’re concerned with. Click on the image to follow the link to the original paper.
 
 **Abstract/symbolic representation**
 

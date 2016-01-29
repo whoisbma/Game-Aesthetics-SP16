@@ -5,10 +5,7 @@ Spring 2016
 
 Instructor: Bryan Ma
 
-
 ![The continuous](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/continuous_discrete.png "The continuous")
-
-
 
 *The continuous and the discrete*
 
@@ -16,26 +13,37 @@ Instructor: Bryan Ma
 
 **A programming class first and foremost**
 
-This class evolved from a series of game programming dorkshops I taught last year in MFADT.
+This class evolved from a series of game programming dorkshops I taught last year in MFADT. They were a testing ground to see how students would respond to a more rigorous kind of creative programming class.
 
-Each dorkshop introduced a new classic game to deconstruct, understand, and recreate from the ground up in Processing. 
-
-We used no game engines, no physics for collision detection, no shortcuts - we wrote these things all ourselves to gain a better appreciation for technical limitations and better insight into how these things really work, while understanding how to better structure systems in code.
+Each dorkshop introduced a new classic game to deconstruct, understand, and recreate from the ground up in Processing. We used no game engines, no physics for collision detection, no shortcuts - we wrote these things all ourselves to gain a better appreciation for technical limitations and better insight into how these things really work, while understanding how to better structure systems in code.
 
 We used Processing because Java is relatively elegant, its implementation via Processing is very clear, and it allowed us to focus on object oriented programming while abstracting things that we would need to spend bandwidth on if we were using C++, and so on. 
 
-![Asteroids](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/asteroids.gif "Asteroids dorkshop") ![Haxe/Flixel](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/svenhead.jpg "Haxe/Flixel dorkshop")
+Asteroids: ![Asteroids](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/asteroids.gif "Asteroids dorkshop") Haxe: ![Haxe/Flixel](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/svenhead.jpg "Haxe/Flixel dorkshop")
 
-![Tetris](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/tetris.gif "Tetris dorkshop") ![Platformer](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/platformer.gif "Platformer dorkshop") 
+Tetris: ![Tetris](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/tetris.gif "Tetris dorkshop") Platformer collision engine:![Platformer](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/platformer.gif "Platformer dorkshop") 
 
-
-
+These dorkshops were made up of a lot of live coding and regularly went 1-2 hours over time. :/  
 
 **An experimental reaction to creative coding pedagogy**
+
+There’s two sides of the creative programming coin in some sense: one is don’t bother tackling things that have already been solved by people more capable than you, and instead focus on creative applications of those problems. The other is: DO tackle them because it will make you see the problems and the ways to apply the solutions creatively in new ways. This class is attempting to tackle the second perspective, and build some stuff from scratch.
+
+#### Class Values
+
+* Understand our tools better
+* Limitations -> creativity
+* Don't take the easy way out
+* Don't resort to cliché
+* Find the aesthetic possibilities in a myriad of formal constraints
 
 #### What kind of aesthetics are you talking about?
 
 **Mechanics, Dynamics, Aesthetics**
+
+[![Mechanics Dynamics Aesthetics](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/MDA.png "Mechanics Dynamics Aesthetics")](http://www.cs.northwestern.edu/~hunicke/MDA.pdf)
+
+
 
 **Abstract/symbolic representation**
 
@@ -55,12 +63,5 @@ We used Processing because Java is relatively elegant, its implementation via Pr
 * Focus on visual content or polish
 * Build entire frameworks or focus on a single framework
 
-#### Class Values
-
-* Understand our tools better
-* Limitations -> creativity
-* Don't take the easy way out
-* Don't resort to cliché
-* Find the aesthetic possibilities in a myriad of formal constraints
 
 #### First Homework

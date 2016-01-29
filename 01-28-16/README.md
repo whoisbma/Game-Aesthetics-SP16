@@ -104,18 +104,50 @@ Problem Attic
 * Focus on visual content or polish
 * Build entire frameworks or focus on a single framework
 
+## What are we going to make?
+
+We're going to cover areas in the following:
+
 #### Topics in Rendering
 
 ![Rogue](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/rogue.png "Rogue")
 
-ASCII
+**ASCII** - once upon a time, terminal output was our only option!
 
 ![Ultima](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/ultima.png "Ultima")
 
-Tiles
+**Tiles** - we'll build a tile editor and play with some various techiques.
 
 ![Wolfenstein3D](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/wolfenstein.png "Wolfenstein3D")
 
-Raycasting
+**Raycasting** - hopefully we'll have time to build the whole thing from scratch - we'll see!
+
+#### Topics in Procedural Generation
+
+![Spelunky](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/spelunky.png "Spelunky")
+
+**Dungeons** - automata, floodfill, walkers, snakes, etc.
+
+![Minecraft](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/minecraft.png "Minecraft")
+
+**Exteriors** - noise, etc.
+
+#### Topics in AI
+
+![Tic-tac-toe](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/minimaxing.png "Tic-tac-toe")
+
+**Minimaxing**
+
+![Pac-Man](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/pac-man.png "Pac-Man")
+
+**Pathfinding**
+
+![The Sims](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/thesims.png "The Sims")
+
+**Agents**
 
 #### First Homework
+
+Build a scene to be represented only in ASCII/terminal output, and have it accept cin input to affect something in the scene. Build two functions into the scene - one that has a simple result, (for example, draws a rectangle or a line) and one with something more complex (a picture? a face? a robot? a mountain?).
+
+If you're feeling a little rough on the code we wrote in class, go through the examples one by one to get more comfortable with writing raw C++.

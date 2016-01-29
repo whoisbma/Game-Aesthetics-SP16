@@ -5,6 +5,7 @@ Spring 2016
 
 Instructor: Bryan Ma
 
+
 ![The continuous](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/continuous_discrete.png "The continuous")
 
 

@@ -61,6 +61,33 @@ This is the opposite of what we want. We want to explore what computer-generated
 
 In order to do this, we will be experimenting with historical constraints for representation. Ultimately, at their heart, computers don’t “want” to draw pictures - they want to crunch numbers. Historically, making them draw pictures has been hard, but there are still things to be learned in forced limitations - and our own technical skills here is a good limitation to embrace as we explore. 
 
+**Some games to think about regarding our various ideas about "aesthetics":**
+
+[![Passage](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/passage.png "Passage")](http://_)
+
+Passage
+
+[![Triad](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/triad.png "Triad")](http://_)
+
+Triad
+
+[![Starseed Pilgrim](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/starseedpilgrim.png "Starseed Pilgrim")](http://_)
+
+Starseed Pilgrim
+
+[![To Build A Better Mousetrap](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/mousetrap.png "To Build A Better Mousetrap")](http://_)
+
+To Build A Better Mousetrap
+
+[![868-Hack](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/868-hack.png "868-Hack")](http://_)
+
+868-Hack
+
+[![Problem Attic](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/problem-attic.png "Problem Attic")](http://_)
+
+Problem Attic
+
+
 #### What are we going to do in this class?
 
 * Write a LOT of code in (C++, Processing/Java, possibly Javascript or Haxe)
@@ -76,6 +103,14 @@ In order to do this, we will be experimenting with historical constraints for re
 * Unity or Unreal
 * Focus on visual content or polish
 * Build entire frameworks or focus on a single framework
+
+#### Topics in Rendering
+
+[![Rogue](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/rogue.png "Rogue")](http://_)
+
+[![ZZT](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/ZZT.png "ZZT")](http://_)
+
+[![Wolfenstein3D](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/wolfenstein.png "Wolfenstein3D")](http://_)
 
 
 #### First Homework

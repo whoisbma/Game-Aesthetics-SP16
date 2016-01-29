@@ -24,13 +24,7 @@ We used no game engines, no physics for collision detection, no shortcuts - we w
 
 We used Processing because Java is relatively elegant, its implementation via Processing is very clear, and it allowed us to focus on object oriented programming while abstracting things that we would need to spend bandwidth on if we were using C++, and so on. 
 
-![The discrete](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/asteroids.gif "Asteroids dorkshop")
-
-![The discrete](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/tetris.gif "Tetris dorkshop")
-
-![The discrete](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/platformer.gif "Platformer dorkshop")
-
-![The discrete](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/svenhead.jpg "Haxe/Flixel dorkshop")
+![Asteroids](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/asteroids.gif "Asteroids dorkshop") ![Tetris](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/tetris.gif "Tetris dorkshop") ![Platformer](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/platformer.gif "Platformer dorkshop") ![Haxe/Flixel](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/svenhead.jpg "Haxe/Flixel dorkshop")
 
 
 

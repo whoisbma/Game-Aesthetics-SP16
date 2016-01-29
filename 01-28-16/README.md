@@ -5,9 +5,9 @@ Spring 2016
 
 Instructor: Bryan Ma
 
-![The continuous](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/continuous.png "The continuous")
+![The continuous](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/continuous_discrete.png "The continuous")
 
-![The discrete](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/discrete.png "The discrete")
+
 
 *The continuous and the discrete*
 

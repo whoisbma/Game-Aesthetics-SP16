@@ -51,6 +51,16 @@ where “aesthetics” is defined as the psychological result of the interaction
 
 **Abstract/symbolic representation**
 
+![Symbols](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/symbols.jpg "Symbols")
+
+Symbolic representation in games has come a long way. However, it also means that we have to contend with this regressive attitude:
+
+> "Recreating a Mission Impossible experience in gaming is easy; recreating emotions in Brokeback Mountain is going to be tough, or at least very sensitive in this country... it will be very hard to create very deep emotions like sadness or love, things that drive the movies," he said. "Until games are photorealistic, it'll be very hard to open up to new genres. We can really only focus on action and shooter titles; those are suitable for consoles now. To dramatically change the industry to where we can insert a whole range of emotions, I feel it will only happen when we reach the point that games are photorealistic; then we will have reached an endpoint and that might be the final console."
+
+This is the opposite of what we want. We want to explore what computer-generated symbols and signs phenomenologically afford - not just attempt to recreate reality.
+
+In order to do this, we will be experimenting with historical constraints for representation. Ultimately, at their heart, computers don’t “want” to draw pictures - they want to crunch numbers. Historically, making them draw pictures has been hard, but there are still things to be learned in forced limitations - and our own technical skills here is a good limitation to embrace as we explore. 
+
 #### What are we going to do in this class?
 
 * Write a LOT of code in (C++, Processing/Java, possibly Javascript or Haxe)

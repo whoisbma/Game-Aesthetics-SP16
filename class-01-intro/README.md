@@ -5,6 +5,10 @@ Spring 2016
 
 Instructor: Bryan Ma
 
+---
+---
+---
+
 #### What is this class?
 
 ![The continuous](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/images/continuous_discrete.png "The continuous")
@@ -99,9 +103,8 @@ Problem Attic
 
 #### What AREN'T we going to do in this class?
 
-* Pure game design
+* Pure game design or visual polish - we're not going to worry about making things really good, we're going to focus on the making.
 * Unity or Unreal
-* Focus on visual content or polish
 * Build entire frameworks or focus on a single framework
 
 ## What are we going to make?
@@ -146,7 +149,11 @@ We're going to cover areas in the following:
 
 **Agents**
 
-#### First Homework
+---
+---
+---
+
+## First Homework
 
 Build a scene to be represented only in ASCII/terminal output, and have it accept cin input to affect something in the scene. Build two functions into the scene - one that has a simple result, (for example, draws a rectangle or a line) and one with something more complex (a picture? a face? a robot? a mountain?).
 

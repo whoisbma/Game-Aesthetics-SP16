@@ -1,12 +1,6 @@
-## GAME AESTHETICS: Intro
+## Game Aesthetics: Intro
 #### 1/28/2016
 
-Spring 2016
-
-Instructor: Bryan Ma
-
----
----
 ---
 
 #### What is this class?

@@ -27,9 +27,13 @@ After you finish the last parser example, modify the parser so that it can handl
 
 #### 3. Moving around the map
 
-Continue what we started in class. Build a whole map out of the 2D array, allowing access for certain pathways. Give each room a description.
+Continue what we started in class with map1.cpp. 
+
+Build a whole map out of the 2D array, allowing access for certain pathways. Give each room a description.
 
 Draw it out on paper as well.
+
+Use the parser to recognize certain commands beyond NORTH EAST WEST SOUTH. Give different results in different rooms. Be creative! 
 
 **Some suggestions:**
 

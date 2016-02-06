@@ -1,74 +1,59 @@
-### Class 2 Homework
+### Class 2: Text Adventures
 
-*-----Due before class, 7 PM, 2/11/16-----*
+##### What is a text adventure? What is Interactive Fiction? (IF)
 
-**Play at least one of the listed games, and to get as far down the list of code homework as possible. Push all your code to your own repo called class-02 or similar, and submit your github repo link to the wiki.**
+- Software that simulates an interactive environment
 
-#### 0: Play!
+- A narrative in which players use text commands to control characters and interact with a space
 
-[Device 6](https://itunes.apple.com/us/app/device-6/id680366065) - Device 6 costs a few dollars on the app store and is well worth it. Pay attention to the following:
+- One of the oldest forms of computer games
 
-* how the game uses and evokes a sense of space
-* how the game makes use of text and the spatiality of text
+- Progenitor of Graphic Adventure games (and in many ways the "adventure game" genre generally)
 
-[With Those We Love Alive](http://aliendovecote.com/uploads/twine/empress/empress.html) - If you play this, do what it asks about creating marks outside of the game. You'll see.
+- Related to "MUDs", "hypertext fiction" and "interactive storytelling"
 
-[Depression Quest](http://www.depressionquest.com/) - When playing this, think about metaphors via agency, control vs. the illusion of control in virtual worlds.
+##### Some formal characteristics
 
-#### 1: Array Review
+Traditionally the entire interface of text adventures are.. well.. text. Some have illustrations. The player acts on the environment around him/her with text commands, like "GET BOOK" or "OPEN DOOR". It is usually not-realtime in any way. Historically there has also been a distinction to draw between text adventures that are puzzle-based vs. narrative-oriented. They reached their peak in the late-70s to mid-80s, and were basically dead as commercial products by the 90s, though there is a notable subculture exploring this area still. They started off heavily influenced by fantasy stories and pen and paper role-playing games, and evolved to become humorous, or conceptual or literary.
 
-If you need practice with arrays, go through each array review code and do the exercises. Push the modified code to your repo.
+The tendancy for syntax guessing - that you had to guess what the parser wanted regarding any given puzzle, instead of just doing whatever came to mind - felt limiting to players and is famously frustrating. ([Babel-fish puzzle](http://everything2.com/title/Babel+Fish+puzzle) from *Hitchiker's Guide to the Galaxy*)
 
-#### 2: Parser
+Text adventures tend to suggest a mode to newcomers where anything is possible, and with this perspective in mind they seem vastly inadequate.
 
-Run through each of the parser examples, doing the exercises.
+Emily Short: “the command prompt is a lie. It tells the player “type something, and I’ll understand you. Which it won’t”. This implication that the player can type anything leads new readers to lots of frustration. However, she also points out “I haven’t much interest in the simulate-everything, let-the-player-do-anything kind of IF...you could spend an eternity building the world-model to offer the player as much freedom as possible, and wind up with something utterly flaccid and dull when you were done, where no action is meaningful because all actions are possible”.
 
-After you finish the last parser example, modify the parser so that it can handle three words, or it trims out everything but the first word and the last word. i.e. “Take the gem” → “TAKE GEM”
+Chris Crawford chased this for a while in the form of Storytron, which was unsuccessful. However, the dream of non-predetermined storytelling still evokes wonder and possibilities for many.
 
-#### 3. Moving around the map
+##### Why are we doing this?
 
-Continue what we started in class. Build a whole map out of the 2D array, allowing access for certain pathways. Give each room a description.
+1. **As a creative exercise - how can we build on the history of text adventures, looking at the natural limitations of our parser, and still be expressive or original? What do we have to say in the context of these limitations? What could we say?**
 
-Draw it out on paper as well.
+2. **As practice with abstracted data structures (our map, our rooms) - this will serve as foundation for everything that comes after.**
 
-**Some suggestions:**
+##### Play
 
-* *fill some rooms and not others, give each room a description. let the player navigate around, making sure they can’t go into the unoccupied rooms.*
+* [*Colossal Cave Adventure*, Will Crowther](http://www.amc.com/shows/halt-and-catch-fire/exclusives/colossal-cave-adventure)
 
-* *Use iostream (cout) to draw the player’s position in a map made of chars representing different types of spaces.*
+* [*Zork*, Infocom](http://textadventures.co.uk/games/view/5zyoqrsugeopel3ffhz_vq/zork)
 
-* *Create an illogical space, where going north from area A takes you to area B, but going south from area B does not take you back to area A.*
+* [*Galatea*, Emily Short](http://ifdb.tads.org/viewgame?id=urxrv27t7qtu52lb)
 
-#### 4: Narrative
+* [*Queers in Love at the End of the World*, Anna Anthropy](http://auntiepixelante.com/endoftheworld)
 
-With your map, fill out the world space to give the player some idea of a space and setting. Don't be generic - be creative!
+* [*A Kiss*, Dan Waber](http://www.logolalia.com/hypertexts/a-kiss.html#)
 
-**Suggestions:**
+##### Engines/frameworks for IF
 
-* *give the player the role of an inanimate object, a force of nature, or an abstract concept. Try using commands that are not associated with human actions - instead of GET SAY OPEN etc. try something more abstract, or exotic.*
+- [Twine](http://twinery.org/)
 
-* *don’t use N S E W directions - use a more abstract method of exploring the space. be creative. use spatial dimensions to store the data, but don’t give the player access to that way of thinking about it.*
+- [Quest](http://textadventures.co.uk/quest)
 
-* *use the map to, instead of representing space, represent a character with a dialogue tree. use the array to navigate the dialogue as if it was a map. each “direction” should represent different things you say. Try to make a coherent system out of it.*
+- [Inform7](http://inform7.com/)
 
-#### 5: Structure (optional)
+##### Supplemental reading: 
 
-**Try these if you're comfortable with the above!**
+- [Chris Crawford on Interactive Storytelling](http://www.amazon.com/Chris-Crawford-Interactive-Storytelling-Edition/dp/0321864972)
 
-* *create an object that moves around the map (like our bouncing ball, for example), and changes the description you see in each of the rooms. in the room’s getDescription() function there should be a check to see if the object is present, and add a string to the description cout << if it is true.*
+- [Twisty Little Passages](http://www.amazon.com/Twisty-Little-Passages-Approach-Interactive/dp/0262633183)
 
-* *create a player object that stores which map positions he/she has already been to. try a boolean array. if the player has already been to a space, the description for each space should change.*
-
-* *create an array of booleans corresponding to the map array that reflects some quality about the space. each room space allows the player to do something in the space that will change the boolean condition for each room. for example, each room could have a light switch that turns on and off the lights in the room.*
-
-* *create an inventory - let the player TAKE/GET things that are in rooms. Try to let the player use items from their inventory on the environment. have rooms “know” what the player has in their inventory to reflect the state of the room (if the player has that object, that means the room doesn’t have it any more).*
-
-* ***ADVANCED**: add a subclasses to Room - have the subclass inherit from Room. that way you can have an array of rooms, but each having their own properties entirely unique to them. you’ll need to search for how to do this, in C++ polymorphism is tricky and requires knowledge of pointers.*
-
-#### 6: Porting (optional)
-
-Convert your code to Processing or OF or p5.js using the main window rather than console output. 
-
-Be creative with how you display the text!
-
-
+- [Cybertext: Perspectives on Ergodic Literature](http://www.amazon.com/Cybertext-Perspectives-Literature-Espen-Aarseth/dp/0801855799)

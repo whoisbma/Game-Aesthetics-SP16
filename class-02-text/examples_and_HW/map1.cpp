@@ -11,6 +11,7 @@ using namespace std;
 
 class Room {
 public:
+	char mapIcon;
 	string description;	
 	bool canGoNorth;
 	bool canGoEast;
@@ -26,14 +27,16 @@ int main()
 	int y = 1;
 	Room map[3][3];			// a 2D array to store our map
 
+
 	//fill the map of Rooms with starting values
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
-			map[j][i].description = "There's nothing here!";	
-			map[j][i].canGoNorth = false;
-			map[j][i].canGoEast = false;	
-			map[j][i].canGoWest = false;
-			map[j][i].canGoSouth = false;	
+			map[i][j].description = "There's nothing here!";	
+			map[i][j].canGoNorth = false;
+			map[i][j].canGoEast = false;	
+			map[i][j].canGoWest = false;
+			map[i][j].canGoSouth = false;	
+			map[i][j].mapIcon = 84+i+j;
 		}
 	}
 
@@ -47,6 +50,17 @@ int main()
 
 	//game loop runs until the user enters 'q'
 	while (input != "q") {
+
+		map[x][y].mapIcon = '@';
+
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				cout << map[i][j].mapIcon;
+			}
+			cout << endl;
+		}
+
+
 
 		cout << "you are at " << x << " " << y << endl;
 		cout << map[x][y].description << endl;		

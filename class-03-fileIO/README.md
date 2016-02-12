@@ -24,7 +24,7 @@ Game Maker and similar tools have a tile/"room" editor and a sprite editor built
 
 ![Tiled](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/Tiled.png)
 
-Game programming frameworks also usually have some compatibility with the files that external tile editors like Tiled. Tile editors let you "paint" arbitrarily sized tiles into a space, with all sorts of meta information. Think of it as a 2D version
+Game programming frameworks also usually have some compatibility with the files that external tile editors like Tiled. Tile editors let you "paint" arbitrarily sized tiles into a space and attach all sorts of information. They then package this data into a file that is read by game frameworks or libraries.
 
 Check out the following tile editors. This is a small range of what's actually out there.
 
@@ -35,7 +35,11 @@ Check out the following tile editors. This is a small range of what's actually o
 * [tIDE (Tilemap Integrated Development Environment)](http://tide.codeplex.com/)
 * [Gleed2D](https://github.com/SteveDunn/Gleed2D/wiki)
 
+This week we won't be using any tools others have written for us, but we'll hack together a little version of a simple data parsing tool ourselves, to load into code, then use its information to fill a 2D array.
+
 ##### The Grid
+
+Before we get to code though, let's think for a minute about why we're fixating so much on the idea of grids to begin with. Everything we've done so far since day 1 involves a 2D array of data, and we've specifically been using these arrays as a means to represent 2-dimensional space. This could mean space that is represented to the user in text only, like our little text adventure system from last week, or to actually create a psuedo-screen to draw to, like week 1. 
 
 // why games with discrete grid?
 
@@ -47,10 +51,7 @@ Check out the following tile editors. This is a small range of what's actually o
 
 //no room for ambiguity.
 
-
-##### Tiles and Polygons
-
-
+//all digital spaces, if you look closely enough, are discrete grids. there are no exceptions.
 
 ##### An extremely janky Bitmap byte parser
 

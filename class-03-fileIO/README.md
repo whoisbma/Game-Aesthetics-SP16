@@ -10,7 +10,8 @@ If we look at any game framework out there, we will see that there is some capac
 
 **Internal Tools**
 
--- image
+![Unity](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/unity.jpg)
+
 Unity's entire interface is built around the concept of the "Scene" editor, which lets us place objects into a 3D grid space. Without this we would need to position everything in code ourselves. 
 
 Additionally Unity is capable of loading all sorts of data files into code - from textures we can create materials, and from 3D meshes and animation data we can create animating characters in 3D space.

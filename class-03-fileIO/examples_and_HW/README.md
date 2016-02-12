@@ -6,6 +6,8 @@
 
 **Submit your github repo link to the wiki.**
 
+**If you haven't caught up on the homework from week 2 (including playing the games!), please do so - we'll chat more in class. I will also post code going over some solutions to the example questions.**
+
 #### 0: Play!
 
 Play **at least TWO** of the following!
@@ -22,24 +24,39 @@ Think how you would implement the game's mechanics in C++.
 
 #### File IO experimentation
 
-Temp
+Starting with *04-bmp_read_3.cpp*, continue with the in-class experimentation of using a hand-drawn bitmap to load into data. 
+
+So far we were using our bitmaps to fill an array of raw data, then directly fill an array of chars that we would then draw to the terminal. Moving on from this, use your bitmaps to represent different kinds of information, like arrays of ints, strings, and custom objects. 
 
 **Suggestions:**
 
-* *temp*
+* *Create an object called LandType, with a string for a description and whatever other data you want to store. Use it in your text adventure engine from the prior week.*
 
-* *temp*
+* *Try loading multiple bitmaps, and load custom objects properties with one per bitmap. For example, each object could represent a creature of some kind, and you would fill an array of chars from the bitmap to store a visual representation of its "face". Then when the user is interacting with that character, you would draw that particular "face" to the terminal.*
 
 #### Match-3 hacking
 
-Temp
+Starting with *05-match_3_game.cpp*, go through the code and make comments anywhere you don't understand things. The code is too bare-bones to be thought of as a complete game. Try the following:
 
-**Suggestions:**
+* *Make sure you can only swap with ADJACENT positions. Currently we can swap everywhere. In order to do this, you'll need to have an if statement checking to see if the position of the swapped character is identical to ones next to it by checking -1 in the x, +1 in the x, -1 in the y, +1 in the y, and combinations of them if you want diagonals.*
 
-* *temp*
+* *Make the match mechanic destroy ONLY matching chars. Currently it destroys a huge block of chars. You'll need to add a similar if statement as above. A related issue is making sure that the destruction doesn't flow over the end/beginning of the arrays.*
 
-* *temp*
+* *If the user doesn't make a match successfully, reverse the swap action. Currently it doesn't matter if there is a match or not - a swap is a swap. To do this, just repeat the original swap.*
 
+* *Add a win state. This could be about eliminating all of a certain character in your arrays, eliminating the board completely, or something else.*
+
+* *Finally, go back to our "tile editor", and create a number of experiments with different amounts of colors in the bmp, creating different char values in the game. Create bmps that allow you to complete the game according to your win state, and bmps that don't. Try all sorts of patterns and see how it informs your interaction when you actually play it. Try a 16x16 grid too.*
+
+I believe many of you will have some trouble with this. If enough people want it, we can meet to review this before next class, potentially as a group. Send me an email. However if you're comfortable with the above, try these advanced suggestions. 
+
+**Advanced suggestions:**
+
+* *Our matching algorithm is extremely rudimentary. Try implementing a recursive function to actually do adjacency tests properly.*
+
+* *Add a lose state. Think about how you might do this.*
+
+* *Add tile "physics" - make tiles fall down if there is an empty space under them.*
 
 #### BONUS
 

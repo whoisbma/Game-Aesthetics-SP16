@@ -43,11 +43,29 @@ alt="crocotile3d" width="240" height="180" border="10" /></a>
 
 This week we won't be using any tools others have written for us, but we'll hack together a little version of a simple data parsing tool ourselves, to load into code, then use its information to fill a 2D array.
 
+##### An extremely janky Bitmap byte parser
+
+![Grid](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/grid.png)
+
+Unlike JPEGs or GIFs, bitmap image files (bmps) are uncompressed. This means that at some level, we have access to the pixel data itself, and we can directly read the contents of the bitmap, byte by byte, and grab out the individual colors that make up the image. This is why we are going to use a paint program like photoshop to serve as a very simple tile editor for us to use. 
+
+Bitmaps, like all digital files, are represented by a single long string of bytes. We can actually see it for ourselves if we parse the binary contents. In hexadecimal, the above image looks like this:
+
+![Grid](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/hex.png)
+
+We can see the point where we start seeing reds (ff0000 or 255, 0, 0), greens (00ff00 or 0, 255, 0) and blues (0000ff or 0, 0, 255), as well as purples, yellows, etc. However there's a big stream of data before that too. THis is called the **header**, and it stores all sorts of meta information about the file. Turns out that there are always exactly 54 bytes in the header, and we can start reading the colors at byte 55. (or 54, counting from 0 instead of 1). This is how all those bytes in the header look in decimal form instead of hexadecimal:
+
+![header in decimal](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/header.png)
+
+More info on bitmaps and the byte header [here](https://en.wikipedia.org/wiki/BMP_file_format) and [here](http://www.fastgraph.com/help/bmp_header_format.html).
+
+Our code will examine the bitmap image byte by byte, pull the RGB color values, and look at the total color of each pixel. With that, we could use that information to do all sorts of things. Check out the files in the homework/examples folder to review this code.
+
 ##### The Grid
 
 **Graphics contexts as a discrete grid**
 
-Before we get to code though, let's think for a minute about why we're fixating so much on the idea of grids to begin with. Everything we've done so far since day 1 involves a 2D array of data, and we've specifically been using these arrays as a means to represent 2-dimensional space. This could mean space that is represented to the user in text only, like our little text adventure system from last week, or to actually create a psuedo-screen to draw to, like week 1. 
+Why have we been fixating so much on the idea of grids to begin with? Everything we've done so far since day 1 involves a 2D array of data, and we've specifically been using these arrays as a means to represent 2-dimensional space. This could mean space that is represented to the user in text only, like our little text adventure system from last week, or to actually create a psuedo-screen to draw to, like week 1. 
 
 This is different than our experience using graphics-oriented frameworks like Processing, OpenFrameworks, and Unity to build games and represent spaces. In those situations we have a **graphics context** where we are only limited by the resolution of the window and our screen, and in some sense, we aren't *truly* limited by them. Even if pixels are discrete - there is no such thing as half a pixel - we can do operations on the screen that do actually take place in those in-between positions, even if it doesn't appear to change onscreen, the math is the math. A point at (1.1, 1.1) may render at what seems to us to be (1,1) on screen - but it is still (1.1,1.1).
 
@@ -63,8 +81,8 @@ With simple games using a discrete grid, not only do we get more to the fundamen
 
 * It makes game mechanics more clear and coherent - there is no longer any room for ambiguity. This is a valuable design approach that we will be able to bring to more sophisticated tools if we want to.
 
-##### An extremely janky Bitmap byte parser
+##### Homework and Examples
 
+This week we're playing with our bitmap byte parser and a small game built out of it. Both are in the subfolder!
 
-
-
+**NOTE: the byte parser is a very flawed little system for reading our bytes! I wrote it to keep the code relatively simple, but this means it won't always work. Stick to 4x4, 8x8, and 16x16 bitmaps.**

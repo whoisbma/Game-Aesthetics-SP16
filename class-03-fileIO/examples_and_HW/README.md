@@ -2,7 +2,7 @@
 
 *-----Due before class, 2/18/16-----*
 
-**Push all your code to your own repo called class-02 or similar.**
+**Push all your code to your own repo in directory "class-03".**
 
 **Submit your github repo link to the wiki.**
 

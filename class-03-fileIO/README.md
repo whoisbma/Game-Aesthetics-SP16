@@ -16,12 +16,14 @@ Unity's entire interface is built around the concept of the "Scene" editor, whic
 
 Additionally Unity is capable of loading all sorts of data files into code - from textures we can create materials, and from 3D meshes and animation data we can create animating characters in 3D space.
 
--- image
+![GMare](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/gmare.png)
+
 Game Maker and similar tools have a tile/"room" editor and a sprite editor built in. You could think of the room editor as a 2D version of Unity's 3D scene editor, and the sprite editor lets you create art assets (also data!) internally.
 
 **External Tools**
 
--- image
+![Tiled](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/Tiled.png)
+
 Game programming frameworks also usually have some compatibility with the files that external tile editors like Tiled. Tile editors let you "paint" arbitrarily sized tiles into a space, with all sorts of meta information. Think of it as a 2D version
 
 Check out the following tile editors. This is a small range of what's actually out there.

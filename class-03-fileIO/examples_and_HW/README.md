@@ -22,13 +22,30 @@ Think how you would implement the game's mechanics in C++.
 
 #### File IO experimentation
 
+Temp
+
 **Suggestions:**
 
-* *lalala*
+* *temp*
 
-* *lalala*
+* *temp*
 
 #### Match-3 hacking
 
+Temp
+
 **Suggestions:**
+
+* *temp*
+
+* *temp*
+
+
+#### BONUS
+
+Write your own file input/byte parsing algorithm for another type of file in C++. 
+
+Try a text file, xml, or json for something simple.
+
+For the brave, a [tga file](http://paulbourke.net/dataformats/tga/) - easier than a bmp, much easier than a png.
 

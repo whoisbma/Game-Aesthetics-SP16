@@ -86,3 +86,5 @@ With simple games using a discrete grid, not only do we get more to the fundamen
 This week we're playing with our bitmap byte parser and a small game built out of it. Both are in the subfolder!
 
 **NOTE: the byte parser is a very flawed little system for reading our bytes! I wrote it to keep the code relatively simple, but this means it won't always work. Stick to 4x4, 8x8, and 16x16 bitmaps.**
+
+Finally, there is another chapter of the C++ book for review of object oriented programming in this repo, and the code we wrote after class is called *oop_review.cpp*.

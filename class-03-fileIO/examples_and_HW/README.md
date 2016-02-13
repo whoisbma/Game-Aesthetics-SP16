@@ -34,6 +34,8 @@ So far we were using our bitmaps to fill an array of raw data, then directly fil
 
 * *Try loading multiple bitmaps, and load custom objects properties with one per bitmap. For example, each object could represent a creature of some kind, and you would fill an array of chars from the bitmap to store a visual representation of its "face". Then when the user is interacting with that character, you would draw that particular "face" to the terminal.*
 
+If you're interested in this, you can easily find much [more sophisticated methods](http://tipsandtricks.runicsoft.com/Cpp/BitmapTutorial.html) of parsing a bmp in C++. The version we looked at in class is extremely simple and flawed - we'll have to stick to very simple bmps (4x4, 8x8, 16x16) - remember to also flip the row order.
+
 #### Match-3 hacking
 
 Starting with *05-match_3_game.cpp*, go through the code and make comments anywhere you don't understand things. The code is too bare-bones to be thought of as a complete game. Try the following:

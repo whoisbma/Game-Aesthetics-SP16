@@ -53,7 +53,7 @@ Bitmaps, like all digital files, are represented by a single long string of byte
 
 ![Grid](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/hex.png)
 
-We can see the point where we start seeing reds (ff0000 or 255, 0, 0), greens (00ff00 or 0, 255, 0) and blues (0000ff or 0, 0, 255), as well as purples, yellows, etc. However there's a big stream of data before that too. THis is called the **header**, and it stores all sorts of meta information about the file. Turns out that there are always exactly 54 bytes in the header, and we can start reading the colors at byte 55. (or 54, counting from 0 instead of 1). This is how all those bytes in the header look in decimal form instead of hexadecimal:
+We can see the point where we start seeing reds (ff0000 or 255, 0, 0), greens (00ff00 or 0, 255, 0) and blues (0000ff or 0, 0, 255), as well as purples, yellows, etc. However there's a big stream of data before that too. This is called the **header**, and it stores all sorts of meta information about the file. Turns out that there are always exactly 54 bytes in the header, and we can start reading the colors at byte 55. (or 54, counting from 0 instead of 1). This is how all those bytes in the header look in decimal form instead of hexadecimal:
 
 ![header in decimal](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/header.png)
 
@@ -69,7 +69,7 @@ Why have we been fixating so much on the idea of grids to begin with? Everything
 
 This is different than our experience using graphics-oriented frameworks like Processing, OpenFrameworks, and Unity to build games and represent spaces. In those situations we have a **graphics context** where we are only limited by the resolution of the window and our screen, and in some sense, we aren't *truly* limited by them. Even if pixels are discrete - there is no such thing as half a pixel - we can do operations on the screen that do actually take place in those in-between positions, even if it doesn't appear to change onscreen, the math is the math. A point at (1.1, 1.1) may render at what seems to us to be (1,1) on screen - but it is still (1.1,1.1).
 
-However the truth is that even though we have all this apparent seamless continuity that we have access to in floating point variables (we could have x = 0.0000001, y = 0.000001 etc.) despite the lower granularity of the graphics context, at its heart the computer can only store digits so small - a floating point variable can only represent a value stored to a set limit of memory. There is still a limit, even though it takes place out of our perceptual space, so ultimately we have a fixed grid of 2D space - just like our little fixed 2D arrays of data.
+However the truth is that even though we have all this apparent seamless continuity that we have access to in floating point variables (we could have x = 0.0000001, y = 0.000001 etc.) despite the much higher granularity of the graphics context, at its heart the computer can only store digits so small - a floating point variable can only represent a value stored to a set limit of memory. There is still a limit, even though it takes place out of our perceptual space, so ultimately we have a fixed grid of 2D space - just like our little fixed 2D arrays of data.
 
 **So why are we fixating on 2D arrays/simple grids if we have all this apparent flexibility?**
 
@@ -80,6 +80,44 @@ With simple games using a discrete grid, not only do we get more to the fundamen
 * It's easier to get to the gameplay, and a good exercise in general. We can create relationships between objects and user input, and objects with other objects with zero obfuscation. Picture designing a tabletop game involving moving through space and using randomness(dice) to influence movement. Would it be easier with a grid, or with a ruler?
 
 * It makes game mechanics more clear and coherent - there is no longer any room for ambiguity. This is a valuable design approach that we will be able to bring to more sophisticated tools if we want to.
+
+##### Games on the Grid
+
+![Chess](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/chess.jpg)
+
+![Go](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/go.jpg)
+
+![Sudoku](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/sudoku.png)
+
+![Crossword](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/crossword.png)
+
+![Rubix](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/rubix.jpg)
+
+![Battleship](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/battleship.jpg)
+
+![D&D](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/d&d.jpg)
+
+![Carcassone](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/carcassonne.jpg)
+
+![Roguelikes](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/roguelike1.png)
+
+![Roguelikes](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/roguelike2.png)
+
+![TSR gold box games](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/TSR.jpg)
+
+![Eye of the Beholder](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/beholder.png)
+
+![Civ 1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/civ1.jpg)
+
+![Civ 2](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/civ2.jpg)
+
+![Civ 4](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/civ4.jpg)
+
+![Sim City 2000](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/simcity2000.jpg)
+
+![XCOM](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/xcom.jpg)
+
+![Bejeweled](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/bejeweled.jpg)
 
 ##### Homework and Examples
 

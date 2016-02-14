@@ -55,6 +55,10 @@ int main()
 	map[2][0].canGoWest = true;
 	map[2][0].canGoSouth = true;
 
+	map[2][1].description = "There is a button to call an elevator. You move to press it, but suddenly feel dizzy and stagger backwards. The dizziness instantly passes, and then returns when you move forward again? You retreat to the north.";
+
+	map[0][1].description = "There is a giant thesis project in your way. You don't understand what it is. You have to go back NORTH.";
+	map[0][1].canGoNorth = true;
 
 	//game loop runs until the user enters 'q'
 	while (input != "q") {
@@ -74,6 +78,10 @@ int main()
 		cin >> input;
 
 		map[x][y].mapIcon = '-';
+
+		if (x == 2 && y == 1) {
+			y--;
+		}
 
 		//check for input
 		if (input == "NORTH") {
@@ -99,6 +107,10 @@ int main()
 				x--;				
 			} else {
 				cout << "NO!\n\n";
+			}
+		} else if (input == "TALK") {
+			if (x == 0 && y == 0) {
+				cout << "'Hello?' you tentatively speak. The head opens its mouth. One word fills the air: 'SVEN'\n";
 			}
 		} else {
 			cout << "I don't understand " << input << "\n";

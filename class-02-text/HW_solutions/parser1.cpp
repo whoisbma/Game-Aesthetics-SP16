@@ -42,9 +42,7 @@ int main()
 
 	// EXERCISE:___________________________________________________
 	// try storing multiple words in "answer instead of just one". see what happens.
-
-
-
+		//answer - it will take only the first string up until an empty space.
 
 	// cin will be inadequate for what we need to do!
 	//_____________________________________________________________

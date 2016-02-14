@@ -75,12 +75,29 @@ int main()
 
 	//your code here---------------------------
 		//declare two new arrays here:
-
-
+		bool bools[] = {false, false, false};
+		bool boolybools[] = {true, true, true};
 
 		//swap all array values here:
+			//step by step solution:
+		bool temp = bools[0];
+		bools[0] = boolybools[0];
+		boolybools[0] = temp;
 
+		temp = bools[1];
+		bools[1] = boolybools[1];
+		boolybools[1] = temp;
 
+		temp = bools[2];
+		bools[2] = boolybools[2];
+		boolybools[2] = temp;
+
+			//loop solution:
+		for (int i = 0; i < 3; i++) {
+			bool temp = bools[i];
+			bools[i] = boolybools[i];
+			boolybools[i] = temp;
+		}
 
 
 	//-----------------------------------------

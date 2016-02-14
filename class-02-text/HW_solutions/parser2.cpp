@@ -47,16 +47,23 @@ int main()
 	//write out in psuedocode how you would split a string of two words, three words, or more, into an array of separate strings.
 	//for example, "nice day today" would become {"nice", "day", "today"}
 	//the key is isspace(charVariable). try it out and see how it works.
-	//
-	//
+
+
 	//psuedocode:
-	//
-	//
-	//
+	//	//loop through all the letters in the string
+	//	//if you haven't found a empty space, add the letters to the first word
+	//	//after you find a space, add all the subsequent letters to the second word
+	//  //etc.
+
+
 	//experiment with isspace(charVariable)
-	//
-	//
-	//
+	char try1 = 'a';
+	char try2 = ' ';
+	char try3 = '_';
+
+	cout << isspace(try1) << endl;
+	cout << isspace(try2) << endl;
+	cout << isspace(try3) << endl;
 	//______________________________________
 
 	return 0;

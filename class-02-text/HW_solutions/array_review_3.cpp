@@ -73,14 +73,44 @@ int main()
 	// fill the first array with a single letter only, like 'a'.
 	// however for the next array, try to fill it with your looping value (... ie. "i" in for (int i = 0; i < 10; i++)...)
 	// see what happens - print out the results!
+	const int FIRSTSIZE = 50;
+	const int SECONDSIZE = 70;
 
+	char first[FIRSTSIZE];
+	char second[SECONDSIZE];
 
+		//filling arrays
+	for (int i = 0; i < FIRSTSIZE; i++) {
+		first[i] = 'a';
+	}
 
+	for (int i = 0; i < SECONDSIZE; i++) {
+		second[i] = i;
+	}
 
+		//printing results
+	for (int i = 0; i < FIRSTSIZE; i++) {
+		cout << first[i] << ", ";
+	}
+	cout << endl;
+
+	for (int i = 0; i < SECONDSIZE; i++) {
+		cout << second[i] << ", ";
+	}
+	cout << endl;
 
 	//next try making another array of chars bigger than 100 or 200, and try filling it in the same way. 
 	//what happens when you print out the values?
+	const int THIRDSIZE = 300;
 
+	char third[THIRDSIZE];
+
+		//filling and printing in one loop
+	for (int i = 0; i < THIRDSIZE; i++) {
+		third[i] = i;
+		cout << third[i] << ", ";
+	}
+	cout << endl;
 
 
 

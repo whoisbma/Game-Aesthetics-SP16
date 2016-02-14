@@ -63,15 +63,15 @@ The final project is a game project that explores in depth at least one technica
 
 #### Weekly Schedule:
 
-1/28: Class intro, C++ and iostream
+1/28: Class intro, C++ and iostream, basic OOP, terminal interface
 
-2/4: Text adventures, input-driven game loops, inform 7, twine
+2/4: Text adventures, interactive fiction, twine, text parsers, input-driven game loops
 
-2/11: 2P grid games, randomness/seeding, minimaxing, screen buffering
+2/11: Code vs. data, file I/O, hacky tile editor, grid mechanics
 
 2/18: Roguelikes, converting the grid, cellular automata, dungeon generation, rudimentary collision
 
-2/25: Pathfinding, node maps, line of sight, ZZT
+2/25: Pathfinding, node maps, line of sight, ZZT, randomness/seeding, minimaxing, screen buffering
 
 3/3: Grid puzzles, tiles, puzzlescript, turn-based game loop
 

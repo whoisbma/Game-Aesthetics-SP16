@@ -52,16 +52,17 @@ int main()
 	//your code here---------------------------
 
 		//declare new arrays here:
-
-
-
-
+		string soManyStrings[100];
+		char lalala[2];
+		float floats[92];
+		bool someBools[7];
 
 		//test array values here:
-
-
-
-
+		cout << soManyStrings[99] << endl;
+		cout << soManyStrings[43] << endl;
+		cout << lalala[0] << endl;
+		cout << floats[86] << endl;
+		cout << someBools[1] << endl;
 
 		//write here in comments what results you got for each test.
 

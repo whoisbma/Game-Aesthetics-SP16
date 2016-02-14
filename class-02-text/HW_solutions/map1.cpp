@@ -27,7 +27,6 @@ int main()
 	int y = 1;
 	Room map[3][3];			// a 2D array to store our map
 
-
 	//fill the map of Rooms with starting values
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
@@ -36,17 +35,26 @@ int main()
 			map[i][j].canGoEast = false;	
 			map[i][j].canGoWest = false;
 			map[i][j].canGoSouth = false;	
-			map[i][j].mapIcon = 84+i+j;
+			map[i][j].mapIcon = '-';
 		}
 	}
 
 	//set starting values for different Rooms
-	map[0][1].description = "Here lies a chocolate chip cookie.";
-	map[2][0].description = "You crane your neck skyward to see the grand Empire State Building up among the clouds! You feel dizzy.";
+	map[1][1].description = "You are in the PComp room in D12. You don't remember why you are here, or even how you got here. There's a soldering iron burning a steadily decreasing amount of solder. The fumes smell great. Did you pass out? There's an exit to the NORTH.";
+	map[1][1].canGoNorth = true;
 
-	map[1][1].description = "There's a path going east and west.";
-	map[1][1].canGoWest = true;
-	map[1][1].canGoEast = true;
+	map[1][0].description = "A subtle feeling of encroaching madness envelops you. You find yourself among a throng of alternately screeching or sleeping graduate students. You can go WEST or EAST - the fumes have gotten even stronger to the south. You aren't going back in there.";
+	map[1][0].canGoEast = true;
+	map[1][0].canGoWest = true;
+
+	map[0][0].description = "There is a giant polygonal head in the corner. It beckons to you. You can go SOUTH and EAST.";
+	map[0][0].canGoSouth = true;
+	map[0][0].canGoEast = true;
+
+	map[2][0].description = "You stand in front of a door with no sign, but you sense it is a gender-neutral bathroom. You knock in vain; it remains locked securely. You can go back WEST, or SOUTH.";
+	map[2][0].canGoWest = true;
+	map[2][0].canGoSouth = true;
+
 
 	//game loop runs until the user enters 'q'
 	while (input != "q") {
@@ -55,18 +63,17 @@ int main()
 
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				cout << map[i][j].mapIcon;
+				cout << map[j][i].mapIcon;
 			}
 			cout << endl;
 		}
-
-
 
 		cout << "you are at " << x << " " << y << endl;
 		cout << map[x][y].description << endl;		
 		cout << "Which direction?" << endl;
 		cin >> input;
 
+		map[x][y].mapIcon = '-';
 
 		//check for input
 		if (input == "NORTH") {
@@ -96,6 +103,7 @@ int main()
 		} else {
 			cout << "I don't understand " << input << "\n";
 		}
+		
 	}
 
 	return 0;

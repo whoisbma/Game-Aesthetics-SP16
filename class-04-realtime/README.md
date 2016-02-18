@@ -165,7 +165,7 @@ We'll also look more at Emoji later in some other contexts.
 
 *Although we'll be talking much more about roguelikes next week, for the rest of the class we'll be exploring one aspect of them in particular.*
 
-[Rogue](http://tripalot.com/roguelike/img/rogue.gif)
+![Rogue](http://tripalot.com/roguelike/img/rogue.gif)
 
 Rogue was written in 1980 by Michael Toy, Glenn Wichman and Ken Arnold for Unix, and was a favorite on college Unix systems in the early 1980s. It's a humble-looking "dungeon crawler" with deceptive implications.
 

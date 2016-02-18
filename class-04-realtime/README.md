@@ -53,6 +53,16 @@ Text-based user interfaces are different from what we've been doing with iostrea
 
 *Microsoft Exchange client for DOS, a text based e-mail program.*
 
+![Visual Basic](http://toastytech.com/guis/textvbdos.png)
+
+*Visual Basic for DOS, a programming environment*
+
+![TempleOS](http://images.vice.com/motherboard/content-images/contentimage/17117/141686640013333.gif)
+
+*TempleOS - a hobbyist OS made by a single person suffering from schizophrenia as an expression of spirituality*
+
+See also: [God's Lonely Programmer](http://motherboard.vice.com/read/gods-lonely-programmer)
+
 ##### Curses
 
 

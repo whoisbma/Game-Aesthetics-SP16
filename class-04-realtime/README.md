@@ -1,5 +1,7 @@
 ### TUIs
 
+##### [You Wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)
+
 #### More on Match-3s
 
 The image below is from a great case study on match 3 games and common game mechanics. 
@@ -157,6 +159,6 @@ With the new ubiquity of Emojis, there is something of a return to character gri
 
 [Emotica](http://auntiepixelante.com/emotica/acitome.html) by Anna Anthropy, Leon Arnott, and Liz Ryerson
 
-#### [You Wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)
+
 
 #### Intro to Roguelikes

@@ -81,9 +81,13 @@ It used PETSCII, a character set analogous to ASCII for the C64, which included 
 
 ![Curses](https://upload.wikimedia.org/wikipedia/en/c/cd/Fmli_lu.PNG)
 
+![Curses](http://bhepple.freeshell.org/dcalc/unix/screenshot.gif)
+
 Curses is a terminal control library and API for Unix and Unix-like systems (OSX, Linux, BSD, etc.), and allows for the construction of TUI applications.
 
 Curses is of particular relevance to digital game history. It was written by Ken Arnold who used it to create **Rogue**, a dungeon crawling game that has gone on to spawn genres and subgenres and sub-sub-genres.
+
+![Rogue!](http://infofarmer.github.io/ebsdc12/Rogue_Unix_Screenshot_CAR.png)
 
 From [wikipedia:](https://en.wikipedia.org/wiki/Curses_(programming_library))
 

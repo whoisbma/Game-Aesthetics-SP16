@@ -1,6 +1,6 @@
-### TUIs
+### TUIs, Proc Gen part 1
 
-Today we'll be looking our match 3 code from last week, doing a tiny bit more C++, and then doing an aesthetic! study of non-sequential text-based user interfaces. ***[You wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)***
+Today we'll be looking our match 3 code from last week, doing a tiny bit more C++, and then doing an aesthetic! study of non-sequential text-based user interfaces. We'll be treating text and character symbols more broadly as medium, and examining historical applications both in practical software and in expressive work. ***[You wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)***
 
 #### More on Match-3s
 
@@ -145,7 +145,7 @@ She also argues for the formal aesthetic values of mediums like teletext and ASC
 
 #### Unicode art / մղìçօժҽ ąɾէ / u̷̥̖̰̱̯̺̱̓́́̐̕n̴̨͇͔͕̜̩̭̯̩͖̫̟̋͜͠i̸̢̼̙̯͙̪̙͇̳̊͜c̷̣͈̞̍̓̇̽͜͝ò̴͕̞̼͍̖̠̘̬͒͛̔̇̂̂́͘͜d̵͈̞͋̀͗̏̔̎̑̑͑̃̃͜e̷̢͍̫͖̗͈̹̰͓̓̌ ̶̧̙̪͚̣͓͍͖̳̗̥̇̓́̀a̶̛͍͔̥̭͆̈́͑͐̿̋͛r̷̛͎̲͇̦̮̍̿͐t̷̥̟͋̋̓͗̄͌̒͒̐͒̿
 
-Unicode is a different dimension than ASCII. 120,000 characters. This is also why you don't see as much of a community around it compared to ASCII or its contemporaries - its constraints are much less appreciable, and it is always growing.
+Unicode is a different dimension than ASCII. 120,000 characters. This is also why you don't see as much of a coherent community around it compared to ASCII or its contemporaries - its constraints are much less appreciable, and it is always growing.
 
 [crashtxt](https://twitter.com/crashtxt)
 
@@ -159,6 +159,38 @@ With the new ubiquity of Emojis, there is something of a return to character gri
 
 [Emotica](http://auntiepixelante.com/emotica/acitome.html) by Anna Anthropy, Leon Arnott, and Liz Ryerson
 
+We'll also look more at Emoji later in some other contexts.
+
+#### Rogue and Random Walkers
+
+*Although we'll be talking much more about roguelikes next week, for the rest of the class we'll be exploring one aspect of them in particular.*
+
+[Rogue](http://tripalot.com/roguelike/img/rogue.gif)
+
+Rogue was written in 1980 by Michael Toy, Glenn Wichman and Ken Arnold for Unix, and was a favorite on college Unix systems in the early 1980s. It's a humble-looking "dungeon crawler" with deceptive implications.
+
+Rogue clones can now be found for nearly every existing platform, even graphing calculators:
+
+![CalcRogue](http://s.uvlist.net/l/y2008/07/51645.jpg)
+
+You can also [grab it on iOS](https://itunes.apple.com/us/app/rogue/id298113808?mt=8&ign-mpt=uo%3D4), with a tileset mode:
+
+![ios Rogue](http://cdn.toucharcade.com/wp-content/uploads/2008/11/rogue.gif)
+
+From [RogueBasin](http://www.roguebasin.com/index.php?title=Rogue):
+
+> Rogue's storyline was very light: the point of the game was to go down all levels of a dungeon, in a world based on Dungeons & Dragons, starting from the top, killing monsters and plundering treasures, until finding the Amulet of Yendor. Then, the player had to climb every level up.
+
+> It was one of the first games to use a spatial representation of the world where the action unfolded instead of textual descriptions - the authors sought to combine a traditional "dice" RPG with the original Crowther/Woods interactive fiction game Colossal Cave Adventure. This was possible using a C function library called Curses, and this brought important advancements into the cRPG and in general PC gaming genre.
+
+> Contrary to many other computer RPGs of the time, all levels were randomly generated. Rogue was intended to be played on Unix terminals. Thus, the dungeon was displayed in text mode, characters and monsters being represented by letters. Actions were issued by single keystrokes. Rogue defined the very roguelike genre. Random generation, basic plot, text (or tiled) based display still are the usual features of roguelikes.
 
 
-#### Intro to Roguelikes
+Brogue
+
+HW: use processing, openframeworks, or p5.js to create a text-based user interface out of an array of chars. Use your random walk approach to carve out a path and make something move around on screen.
+
+suggestions: 
+create your own font. 
+try a crazy font. zapf dingbats or whatever. 
+Use class

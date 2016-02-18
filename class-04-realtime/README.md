@@ -43,7 +43,9 @@ Then if the makefile is just saved as "makefile" we can just run ```make``` in t
 
 With iostream we've more or less been working with an extremely rudimentary loop of text-based input-output. For interactivity between a user and the computer, this is the most fundamental we can get. The next step up is something (retroactively!) called a **text-based user interface** (TUI), and some examples of which should be pretty familiar looking, if you grew up with computers at all or ever had to navigate your PC's BIOS growing up.
 
-Text-based user interfaces are different from what we've been doing with iostream. Iostream is still giving us a text-based interface, but it processes events and operates sequentially, as we've seen. A TUI on the other hand might let us use the keyboard to move a cursor around a field and select text based options, or even use the mouse. It takes real time input and not just is an interface to write to variables directly via console in commands or the like. In other words, its pretty similar to what we think of when we think about user interfaces now. 
+Text-based user interfaces are different from what we've been doing with iostream. Iostream is still giving us a text-based interface, but it processes events and operates sequentially, as we've seen. A TUI on the other hand might let us use the keyboard to move a cursor around a field and select text based options, or even use the mouse. It takes real time input and not just is an interface to write to variables directly via console in commands or the like. In other words, its pretty similar to what we think of when we think about user interfaces now.
+
+Many heavily used TUIs came about after GUIs had already been in use for years, and were very much influenced by them, having pull down menus, etc. In addition, many embedded systems still use TUIs.
 
 ![bios](https://upload.wikimedia.org/wikipedia/commons/0/05/Award_BIOS_setup_utility.png)
 
@@ -61,10 +63,19 @@ Text-based user interfaces are different from what we've been doing with iostrea
 
 *TempleOS - a hobbyist OS made by a single person suffering from schizophrenia as an expression of spirituality*
 
-See also: [God's Lonely Programmer](http://motherboard.vice.com/read/gods-lonely-programmer)
+*See also: [God's Lonely Programmer](http://motherboard.vice.com/read/gods-lonely-programmer)*
+
+##### Commodore 64
+
+![C64](http://www.commodore64.org/c64screen.gif)
+
+The Commodore 64 was an extremely influential home computer released in 1982.
+
+The Commodore 64 was very notable for allowing users to move the cursor over the entire screen area, entering and editing BASIC program code, also taking direct mode commands.
 
 ##### Curses
 
+Curses
 
 #### Intro to Roguelikes
 

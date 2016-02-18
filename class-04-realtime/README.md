@@ -1,3 +1,5 @@
+### TUIs
+
 #### More on Match-3s
 
 The image below is from a great case study on match 3 games and common game mechanics. 
@@ -141,11 +143,11 @@ She also argues for the formal aesthetic values of mediums like teletext and ASC
 
 #### Unicode art / մղìçօժҽ ąɾէ / u̷̥̖̰̱̯̺̱̓́́̐̕n̴̨͇͔͕̜̩̭̯̩͖̫̟̋͜͠i̸̢̼̙̯͙̪̙͇̳̊͜c̷̣͈̞̍̓̇̽͜͝ò̴͕̞̼͍̖̠̘̬͒͛̔̇̂̂́͘͜d̵͈̞͋̀͗̏̔̎̑̑͑̃̃͜e̷̢͍̫͖̗͈̹̰͓̓̌ ̶̧̙̪͚̣͓͍͖̳̗̥̇̓́̀a̶̛͍͔̥̭͆̈́͑͐̿̋͛r̷̛͎̲͇̦̮̍̿͐t̷̥̟͋̋̓͗̄͌̒͒̐͒̿
 
-Unicode is a different dimension than ASCII. 120,000 characters. 
+Unicode is a different dimension than ASCII. 120,000 characters. This is also why you don't see as much of a community around it compared to ASCII or its contemporaries - its constraints are much less appreciable, and it is always growing.
 
 [crashtxt](https://twitter.com/crashtxt)
 
-And related, is...
+And related, but more, is...
 
 #### Emojis
 
@@ -155,8 +157,6 @@ With the new ubiquity of Emojis, there is something of a return to character gri
 
 [Emotica](http://auntiepixelante.com/emotica/acitome.html) by Anna Anthropy, Leon Arnott, and Liz Ryerson
 
-https://twitter.com/crashtxt
-
-[You wake on a grassy plain. windswept. blustered. empty.](https://vine.co/v/OlQgVPOTXUx)
+#### [You Wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)
 
 #### Intro to Roguelikes

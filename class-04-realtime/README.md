@@ -1,6 +1,8 @@
 ### TUIs
 
-##### [You Wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)
+Today we'll be looking our match 3 code from last week, doing a tiny bit more C++, and then doing an aesthetic! study of non-sequential text-based user interfaces.
+
+***[You wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)***
 
 #### More on Match-3s
 

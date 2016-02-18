@@ -105,7 +105,7 @@ Conio.h is its MS-DOS analogue.
 
 ![ZZT](http://www.myabandonware.com/media/screenshots/z/zzt-1b5/zzt_3.gif)
 
-
+![ZZT](http://i.gayriots.com/zzt/town/zzt_018.png)
 
 ZZT is a game and scripting environment created in 1991 by Tim Sweeney, who founded Epic (yeah, [that Epic](https://www.unrealengine.com/what-is-unreal-engine-4)).
 

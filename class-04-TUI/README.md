@@ -185,7 +185,7 @@ From [RogueBasin](http://www.roguebasin.com/index.php?title=Rogue):
 
 > Contrary to many other computer RPGs of the time, all levels were randomly generated. Rogue was intended to be played on Unix terminals. Thus, the dungeon was displayed in text mode, characters and monsters being represented by letters. Actions were issued by single keystrokes. Rogue defined the very roguelike genre. Random generation, basic plot, text (or tiled) based display still are the usual features of roguelikes.
 
-Some important takeaways from what Rogue offered game mechanics, and why they are still played today:
+Some important takeaways from what Rogue offered game mechanics, and why Rogue and Roguelikes are still played today:
 
 * Randomly generated = the possibility of continual newness. Compare to games where the worlds are explicitly designed - Mario doesn't really feel the same once you know the levels inside and out.
 
@@ -199,19 +199,23 @@ An excellent contemporary text-interface Roguelike: [Brogue](https://sites.googl
 
 ![Brogue](https://308192c9-a-62cb3a1a-s-sites.googlegroups.com/site/broguegame/home/Torchlit%20staircase.png?attachauth=ANoY7colzCm13qdlz6wPXwnQNQnd0I7VV-R_TN7F5kdWgNXED-maCV6lnKHfwQVyL_LVhP_YOgnad-md-9IlsXd8E4eyy89XF37zYIZwKgpbKWnKMKPa1cMF-kVHH6uBELWZ0vVyk0Y8U8mB-LPbizR9wd46gRrBEbIla8-Qouw_x7-p8UcR5PgWderkQ1DpkWNCNgbbPENM9-WifmvnSbKLS8mGhBz9heVpMm_FopTbwwz04V6704c%3D&attredirects=0)
 
-#### Char array as screen
+#### Character grid as screen
 
-An aside: play Passage.
+Passage
 
 #### HW
 
-HW: use processing, openframeworks, or p5.js to create a text-based user interface out of an array of chars. Use your random walk approach to carve out a path and make an object move around on screen and interact with things.
+HW: use processing, openframeworks, or p5.js (or iostream!) to create a text-based user interface out of an array of chars. Use your random walk approach to carve out a path and make an object move around on screen and interact with things.
 
-**suggestions: **
+There doesn't need to be a goal, but there should be some sort of relationship between the player and the world. You could have a 2D array of pac-man-esque dots that are removed whenever the player moves over it.
+
+Advanced: Build an input system that relies on the player's movement to increment. In this case you'd be building your own turn-based system.
+
+**suggestions:**
 
 * create your own font.
 * try a crazy font. zapf dingbats or whatever. 
 * Use classes for a player object and other objects in the world.
 * Combine/mix up/hack the relationship of the two forms of text we're concerned with: text/char as spatial metaphor vs. text's relationship to language
-* Don't limit yourself to the explicit grid. Use it as a starting point. Remember you're emulating a TUI to explore its formal qualities, but there's room for a remix. 
+* Don't limit yourself to a "perfect" grid. Use it as a starting point. Remember you're emulating a TUI to explore its formal qualities, but there's room for a remix. 
 * When representing space, think about Passage's approach - past vs. future - and how the screen represents this in a metaphor. How else can you metaphoricize space with a grid of characters?

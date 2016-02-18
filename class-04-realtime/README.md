@@ -117,6 +117,8 @@ Check out an excerpt of Anna Anthropy's [book on ZZT](http://bossfightbooks.com/
 
 Also the blog companion piece to the ZZT book, [Unlawful Invisibles](http://unlawfulinvisibles.tumblr.com/).
 
+[JZT, a browser-based homage to ZZT](http://jzt.xyz/)
+
 #### Raquel Meyers
 
 ![Raquel Meyers](http://www.creativeapplications.net/wp-content/uploads/2011/09/2sleep13.png)

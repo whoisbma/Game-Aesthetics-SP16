@@ -77,21 +77,35 @@ It used PETSCII, a character set analogous to ASCII for the C64, which included 
 
 ![PETSCII symbols](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/PET_Keyboard.svg/1280px-PET_Keyboard.svg.png)
 
-Artists like [Raquel Meyers](http://www.raquelmeyers.com/) more or less exclusively work with ASCII and PETSCII-style characters. 
-
-> This chapter looks at teletext from the perspective of an artist and of its artistic value. It is argued that teletext is not just news on demand provided by television networks or a character set, and that it is about much more than nostalgia, profit, constraints, domesticity or zombie technology stored in a garage, because teletext performs in ways we have not fully designed it for and not yet fully understood. Teletext is compared to brutalist architecture with which it shares many similarities: text is used unadorned and roughcast, like concrete. Brutalism has an unfortunate reputation of evoking a raw dystopia and teletext evokes an “object of nostalgia,” It is a challenge and has the universal language of silence. The text further argues that using old technologies, like teletext, is a commitment that is at the same time a risk because it does not seek to forge a self-identity. It is a dialogue of possibilities rather than an ego-trip monologue with technology. And these possibilities are irrelevant to the individual’s self-identity and pursuits. Finally, the chapter also explores how teletext is not a physical object; it is the dark band dividing pictures horizontally on the television screen, used by the PAL system. Vertical-blanking-interval lines like REM (rapid eye movement) sleep intervals. A door to unlock the Imagination.
-
-
-##### Teletext
-
-
 ##### Curses
 
 Curses
 
-#### Intro to Roguelikes
 
-#### Alt grids
+
+
+
+#### Raquel Meyers
+
+![Raquel Meyers](http://www.creativeapplications.net/wp-content/uploads/2011/09/2sleep13.png)
+
+Artists like [Raquel Meyers](http://www.raquelmeyers.com/) more or less exclusively work with ASCII and PETSCII-style characters. 
+
+> "Instead of drawing pixels, I type characters and symbols on the keyboard. The way of thinking and imaging changes completely, there is no pixels or blocks anymore only the characters set, and I don’t really need anything else. It’s really direct, since you have all the symbols directly on the keyboard. Start the computer and after a second you can start making graphics if you want. So far PETSCII and Teletext are my favourite text modes."
+
+> "Text graphics is the world we live in. When we communicate with others, we still do it mostly through text. Social media, searches, databases, SMS, etc. Text is still a very fundamental part of the digital. In fact, text-mode is sort of a symbol for hardcore computing. Hex editors, command line prompts and programming languages are all text. And they are a key to get closer to the machine. That’s one reason that the 8-bit stuff is so popular. ... But, for me, the most important thing is that it feels good to do it."
+
+[Үеtі Βаd ̬Ԍ̡᷂υу Р҃οlk̂a](https://vimeo.com/106280958)
+
+[Vladijenk II (The corroded mainframe at Tartarus edition) live](https://vimeo.com/144860400)
+
+She also argues for the formal aesthetic values of mediums like teletext and ASCII.
+
+> "This chapter looks at teletext from the perspective of an artist and of its artistic value. It is argued that teletext is not just news on demand provided by television networks or a character set, and that it is about much more than nostalgia, profit, constraints, domesticity or zombie technology stored in a garage, because teletext performs in ways we have not fully designed it for and not yet fully understood. Teletext is compared to brutalist architecture with which it shares many similarities: text is used unadorned and roughcast, like concrete. Brutalism has an unfortunate reputation of evoking a raw dystopia and teletext evokes an “object of nostalgia,” It is a challenge and has the universal language of silence. The text further argues that using old technologies, like teletext, is a commitment that is at the same time a risk because it does not seek to forge a self-identity. It is a dialogue of possibilities rather than an ego-trip monologue with technology. And these possibilities are irrelevant to the individual’s self-identity and pursuits. Finally, the chapter also explores how teletext is not a physical object; it is the dark band dividing pictures horizontally on the television screen, used by the PAL system. Vertical-blanking-interval lines like REM (rapid eye movement) sleep intervals. A door to unlock the Imagination."
+
+[Raquel Meyer's and GOTO80's Text-Mode tumblr](http://text-mode.tumblr.com/)
+
+#### Emoji
 
 http://auntiepixelante.com/emotica/acitome.html
 
@@ -99,3 +113,4 @@ https://twitter.com/crashtxt
 
 [You wake on a grassy plain. windswept. blustered. empty.](https://vine.co/v/OlQgVPOTXUx)
 
+#### Intro to Roguelikes

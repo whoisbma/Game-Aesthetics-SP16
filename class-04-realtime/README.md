@@ -139,7 +139,15 @@ She also argues for the formal aesthetic values of mediums like teletext and ASC
 
 [Raquel Meyer's and GOTO80's Text-Mode tumblr](http://text-mode.tumblr.com/)
 
-#### Emotica
+#### Unicode art / մղìçօժҽ ąɾէ / u̷̥̖̰̱̯̺̱̓́́̐̕n̴̨͇͔͕̜̩̭̯̩͖̫̟̋͜͠i̸̢̼̙̯͙̪̙͇̳̊͜c̷̣͈̞̍̓̇̽͜͝ò̴͕̞̼͍̖̠̘̬͒͛̔̇̂̂́͘͜d̵͈̞͋̀͗̏̔̎̑̑͑̃̃͜e̷̢͍̫͖̗͈̹̰͓̓̌ ̶̧̙̪͚̣͓͍͖̳̗̥̇̓́̀a̶̛͍͔̥̭͆̈́͑͐̿̋͛r̷̛͎̲͇̦̮̍̿͐t̷̥̟͋̋̓͗̄͌̒͒̐͒̿
+
+Unicode is a different dimension than ASCII. 120,000 characters. 
+
+[crashtxt](https://twitter.com/crashtxt)
+
+And related, is...
+
+#### Emojis
 
 With the new ubiquity of Emojis, there is something of a return to character grid aesthetics.
 

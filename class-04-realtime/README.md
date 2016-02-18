@@ -71,7 +71,19 @@ Many heavily used TUIs came about after GUIs had already been in use for years, 
 
 The Commodore 64 was an extremely influential home computer released in 1982.
 
-The Commodore 64 was very notable for allowing users to move the cursor over the entire screen area, entering and editing BASIC program code, also taking direct mode commands.
+The Commodore 64 was very notable at its time for allowing users to move the cursor over the entire screen area, entering and editing BASIC program code, also taking direct commands.
+
+It used PETSCII, a character set analogous to ASCII for the C64, which included semi-graphics characters allowing for a higher degree of sophistication in visual representation with text. The earlier Commodore PET (1977) was one of the first systems to rely heavily on semigraphical characters to get any form of graphics on screen.
+
+![PETSCII symbols](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/PET_Keyboard.svg/1280px-PET_Keyboard.svg.png)
+
+Artists like [Raquel Meyers](http://www.raquelmeyers.com/) more or less exclusively work with ASCII and PETSCII-style characters. 
+
+	This chapter looks at teletext from the perspective of an artist and of its artistic value. It is argued that teletext is not just news on demand provided by television networks or a character set, and that it is about much more than nostalgia, profit, constraints, domesticity or zombie technology stored in a garage, because teletext performs in ways we have not fully designed it for and not yet fully understood. Teletext is compared to brutalist architecture with which it shares many similarities: text is used unadorned and roughcast, like concrete. Brutalism has an unfortunate reputation of evoking a raw dystopia and teletext evokes an “object of nostalgia,” It is a challenge and has the universal language of silence. The text further argues that using old technologies, like teletext, is a commitment that is at the same time a risk because it does not seek to forge a self-identity. It is a dialogue of possibilities rather than an ego-trip monologue with technology. And these possibilities are irrelevant to the individual’s self-identity and pursuits. Finally, the chapter also explores how teletext is not a physical object; it is the dark band dividing pictures horizontally on the television screen, used by the PAL system. Vertical-blanking-interval lines like REM (rapid eye movement) sleep intervals. A door to unlock the Imagination.
+
+
+##### Teletext
+
 
 ##### Curses
 

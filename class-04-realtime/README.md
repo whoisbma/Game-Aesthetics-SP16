@@ -1,4 +1,4 @@
-### TUIs, Proc Gen part 1
+### Text-Based User Interfaces / Proc Gen part 1
 
 Today we'll be looking our match 3 code from last week, doing a tiny bit more C++, and then doing an aesthetic! study of non-sequential text-based user interfaces. We'll be treating text and character symbols more broadly as medium, and examining historical applications both in practical software and in expressive work. ***[You wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)***
 

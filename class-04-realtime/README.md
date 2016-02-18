@@ -111,7 +111,11 @@ ZZT is a game and scripting environment created in 1991 by Tim Sweeney, who foun
 
 ZZT uses ANSI, an extended version of ASCII, more flexible because of symbols intended for drawing. You could even color the background with it.
 
+ZZT was popular despite its visual simplicity (especially for 1991), largely because of the integration of an object-oriented scripting language called ZZT-OOP. ZZT turned into a community that still has activity around it, all because of the level editor.
 
+Check out an excerpt of Anna Anthropy's [book on ZZT](http://bossfightbooks.com/products/zzt-by-anna-anthropy) [here](http://auntiepixelante.com/?p=2103)
+
+Also the blog companion piece to the ZZT book, [Unlawful Invisibles](http://unlawfulinvisibles.tumblr.com/).
 
 #### Raquel Meyers
 
@@ -133,13 +137,13 @@ She also argues for the formal aesthetic values of mediums like teletext and ASC
 
 [Raquel Meyer's and GOTO80's Text-Mode tumblr](http://text-mode.tumblr.com/)
 
-#### Emoji
+#### Emotica
+
+With the new ubiquity of Emojis, there is something of a return to character grid aesthetics.
 
 ![Emotica](http://auntiepixelante.com/emotica/screen.png)
 
-by Anna Anthropy, Leon Arnott, and Liz Ryerson
-
-[Emotica](http://auntiepixelante.com/emotica/acitome.html)
+[Emotica](http://auntiepixelante.com/emotica/acitome.html) by Anna Anthropy, Leon Arnott, and Liz Ryerson
 
 https://twitter.com/crashtxt
 

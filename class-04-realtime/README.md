@@ -135,7 +135,11 @@ She also argues for the formal aesthetic values of mediums like teletext and ASC
 
 #### Emoji
 
-http://auntiepixelante.com/emotica/acitome.html
+![Emotica](http://auntiepixelante.com/emotica/screen.png)
+
+by Anna Anthropy, Leon Arnott, and Liz Ryerson
+
+[Emotica](http://auntiepixelante.com/emotica/acitome.html)
 
 https://twitter.com/crashtxt
 

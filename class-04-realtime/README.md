@@ -83,11 +83,15 @@ Curses is a terminal control library and API for Unix and Unix-like systems (OSX
 
 Curses is of particular relevance to digital game history. It was written by Ken Arnold who used it to create **Rogue**, a dungeon crawling game that has gone on to spawn genres and subgenres and sub-sub-genres.
 
-		Curses is designed to facilitate GUI-like functionality on a text-only device, such as a PC running in console mode, a hardware ANSI terminal, a Telnet or SSH client, or similar.
+From [wikipedia:](https://en.wikipedia.org/wiki/Curses_(programming_library))
 
-		Curses-based programs often have a user interface that resembles a traditional graphical user interface, including 'widgets' such as text boxes and scrollable lists, rather than the command line interface (CLI) most commonly found on text-only devices. This can make them more user-friendly than a CLI-based program, while still being able to run on text-only devices. Curses-based software can also have a lighter resource footprint and operate on a wider range of systems (both in terms of hardware and software) than their GUI-based counterparts. This includes old pre-1990 machines along with modern embedded systems using text-only displays.
+> Curses is designed to facilitate GUI-like functionality on a text-only device, such as a PC running in console mode, a hardware ANSI terminal, a Telnet or SSH client, or similar.
+
+> Curses-based programs often have a user interface that resembles a traditional graphical user interface, including 'widgets' such as text boxes and scrollable lists, rather than the command line interface (CLI) most commonly found on text-only devices. This can make them more user-friendly than a CLI-based program, while still being able to run on text-only devices. Curses-based software can also have a lighter resource footprint and operate on a wider range of systems (both in terms of hardware and software) than their GUI-based counterparts. This includes old pre-1990 machines along with modern embedded systems using text-only displays.
 
 Curses and its offshoots (especially Ncurses) is still used today to create **"rogue-likes"** and other text-based applications.
+
+Conio.h is its MS-DOS analogue.
 
 ##### ZZT
 

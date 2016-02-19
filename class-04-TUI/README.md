@@ -1,18 +1,6 @@
 ### Text-Based User Interfaces / Proc Gen part 1
 
-Today we'll be looking our match 3 code from last week, doing a tiny bit more C++, and then doing an aesthetic! study of non-sequential text-based user interfaces. We'll be treating text and character symbols more broadly as medium, and examining historical applications both in practical software and in expressive work. ***[You wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)***
-
-#### More on Match-3s
-
-The image below is from a great case study on match 3 games and common game mechanics. 
-
-That said, take it with a grain of salt as any studies like these are sort of necessarily conservative. 
-
-Source: [Match Game Mechanics: An Exhaustive Survey](http://gamasutra.com/blogs/JonathanBailey/20150227/237544/Match_Game_Mechanics_An_exhaustive_survey.php)
-
-![match 3 mechanics](http://www.gamelogic.co.za/images/MatchGamesInfographic.png)
-
-Also check out Jesper Juul's paper on the topic: [Swap Adjacent Gems to Make Sets of Three](http://www.jesperjuul.net/text/swapadjacent/)
+Today we'll be looking our match 3 code from last week, doing a bit more basic C++, and then doing an aesthetic! study of non-sequential text-based user interfaces. We'll be treating text and character symbols more broadly as medium, and examining historical applications both in practical software and in expressive work. ***[You wake on a grassy plain. Windswept. Blustered. Empty.](https://vine.co/v/OlQgVPOTXUx)***
 
 #### Separate class files in iostream
 

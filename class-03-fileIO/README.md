@@ -119,6 +119,18 @@ With simple games using a discrete grid, not only do we get more to the fundamen
 
 ![Bejeweled](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP15/master/class-03-fileIO/images/bejeweled.jpg)
 
+##### More on Match-3s
+
+The image below is from a great case study on match 3 games and common game mechanics. 
+
+That said, take it with a grain of salt as any studies like these are sort of necessarily conservative. 
+
+Source: [Match Game Mechanics: An Exhaustive Survey](http://gamasutra.com/blogs/JonathanBailey/20150227/237544/Match_Game_Mechanics_An_exhaustive_survey.php)
+
+![match 3 mechanics](http://www.gamelogic.co.za/images/MatchGamesInfographic.png)
+
+Also check out Jesper Juul's paper on the topic: [Swap Adjacent Gems to Make Sets of Three](http://www.jesperjuul.net/text/swapadjacent/)
+
 ##### Homework and Examples
 
 This week we're playing with our bitmap byte parser and a small game built out of it. Both are in the subfolder!

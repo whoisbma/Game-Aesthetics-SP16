@@ -8,14 +8,21 @@ In this repo are examples for each technique.
 
 Agents:
 
-![agents](../cave.png)
+![agents](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/cave.png)
 
 Noise:
 
+![noise1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/map1.png)
+
+![noise2](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/map2.png)
+
 BSP:
+
+![BSP](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/BSP.png)
 
 Automata:
 
+![automata](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/automata-treasure.png)
 
 
 Create a tiny world simulation, represented by a 2D array. 

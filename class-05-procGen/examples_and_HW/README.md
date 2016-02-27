@@ -93,7 +93,7 @@ This example code is the most advanced. Go for this one if you're comfortable wi
 
 [Roguebasin article on the topic](http://www.roguebasin.com/index.php?title=Cellular_Automata_Method_for_Generating_Random_Cave-Like_Levels)
 
-##### Other References:
+### Other References:
 
 [Technique summary](http://www.futuredatalab.com/proceduraldungeon/)
 

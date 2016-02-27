@@ -4,7 +4,9 @@
 
 Combine at least two procedural generation techniques we discussed to create a system for dynamically generating a space. It could be a dungeon, a house, an island, a planet, a galaxy, a universe, or any other space else you could imagine.
 
-Finally create a "player" object in the world that can move around and interact with the world in some way.
+Secondly - do not just use ASCII text, we're done with TUIs now and moving into sprites next week. Come up with a different way to represent the space.
+
+Finally, create a "player" object in the world that can move around and interact with the world in some way.
 
 **Extra suggestions:**
 

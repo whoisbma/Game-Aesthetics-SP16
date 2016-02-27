@@ -23,15 +23,13 @@ Secondly - do not just use ASCII text, we're done with TUIs now and moving into 
 
 Finally, create a "player" object in the world that can move around and interact with the world in some way.
 
-All the example code is in Processing. Brownie points if you adapt it to OF or P5.
-
 **Extra suggestions:**
 
 * create custom sprites for each cell type.
 * even better: create procedural graphics for each type of cell!
 * Create a puzzle mechanic for the user to interact with. Think back to our match 3s. What if the player could move some objects around? How would you generate them randomly?
 
-In this repo are examples for each technique.
+In this repo are examples for each technique. All the example code is in Processing. Brownie points if you adapt it to OF or P5.
 
 ### Agents:
 

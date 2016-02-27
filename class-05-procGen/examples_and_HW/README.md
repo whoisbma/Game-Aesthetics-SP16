@@ -1,4 +1,4 @@
-#### Homework- start project 1.
+## Homework 5 - proc gen space
 
 *----Due before class, Thursday, 3/3----*
 
@@ -14,7 +14,7 @@ Finally create a "player" object in the world that can move around and interact 
 
 In this repo are examples for each technique.
 
-##### Agents:
+#### Agents:
 
 ![agents](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/cave.png)
 
@@ -27,27 +27,40 @@ What else could you do with an agent?
 [Random Level Gen in Nuclear Throne](http://www.vlambeer.com/2013/04/02/random-level-generation-in-wasteland-kings/)
 
 
-##### Noise:
+#### Noise:
 
 ![noise1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/map1.png)
 
 ![noise2](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/map2.png)
 
-##### BSP:
+**References:**
+
+[Ken Perlin's presentation on noise](http://www.noisemachine.com/talk1/)
+
+#### BSP:
 
 ![BSP](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/BSP.png)
 
-References:
+**References:**
 
-http://www.roguebasin.com/index.php?title=Basic_BSP_Dungeon_generation
+[Basic BSP](http://www.roguebasin.com/index.php?title=Basic_BSP_Dungeon_generation)
 
-##### Automata:
+[More sophisticated example](http://gamedevelopment.tutsplus.com/tutorials/how-to-use-bsp-trees-to-generate-game-maps--gamedev-12268)
+
+#### Automata:
 
 ![automata](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/automata-treasure.png)
+
+**References:**
 
 [Roguebasin article on the topic](http://www.roguebasin.com/index.php?title=Cellular_Automata_Method_for_Generating_Random_Cave-Like_Levels)
 
 ##### Other References:
 
-https://www.reddit.com/r/proceduralgeneration/
+[Technique summary](http://www.futuredatalab.com/proceduraldungeon/)
 
+[Proc Gen Reddit](https://www.reddit.com/r/proceduralgeneration/)
+
+[Maze algorithms](http://www.astrolog.org/labyrnth/algrithm.htm)
+
+[Maze combination technique](http://journal.stuffwithstuff.com/2014/12/21/rooms-and-mazes/)

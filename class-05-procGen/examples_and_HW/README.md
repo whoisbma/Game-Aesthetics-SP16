@@ -2,6 +2,21 @@
 
 *----Due before class, Thursday, 3/3----*
 
+**Play:**
+
+Play one of the following and pay attention to the world. Imagine how it was created. All but Dwarf Fortress or Spelunky classic costs money, but they are all pretty brilliant in different ways and IMO are worth it.
+
+* [Minecraft](https://minecraft.net/) ($)
+* [Proteus](http://twistedtreegames.com/proteus/) ($)
+* [Spelunky](http://www.spelunkyworld.com/) ($)
+* [Spelunky Classic](http://tinysubversions.com/game/spelunky/) (no $)
+
+If you've played the others, play Dwarf Fortress. (for real)
+
+* [Dwarf Fortress](http://www.bay12games.com/dwarves/) (no $)
+
+**Make:**
+
 Combine at least two procedural generation techniques we discussed to create a system for dynamically generating a space. It could be a dungeon, a house, an island, a planet, a galaxy, a universe, or any other space else you could imagine.
 
 Secondly - do not just use ASCII text, we're done with TUIs now and moving into sprites next week. Come up with a different way to represent the space.

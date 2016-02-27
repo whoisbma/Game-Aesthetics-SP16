@@ -38,6 +38,8 @@ Perlin Noise is a hugely useful technique for generating random, but natural-see
 
 **References:**
 
+[Daniel Shiffman's intro to noise](https://vimeo.com/58492076)
+
 [Ken Perlin's presentation on noise](http://www.noisemachine.com/talk1/)
 
 ### BSP:

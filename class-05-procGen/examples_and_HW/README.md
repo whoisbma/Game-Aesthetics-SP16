@@ -16,7 +16,7 @@ Finally, create a "player" object in the world that can move around and interact
 
 In this repo are examples for each technique.
 
-#### Agents:
+### Agents:
 
 ![agents](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/cave.png)
 
@@ -28,20 +28,25 @@ What else could you do with an agent?
 
 [Random Level Gen in Nuclear Throne](http://www.vlambeer.com/2013/04/02/random-level-generation-in-wasteland-kings/)
 
-
-#### Noise:
+### Fractal Functions (e.g. Perlin Noise):
 
 ![noise1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/map1.png)
 
 ![noise2](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/map2.png)
 
+Perlin Noise is a hugely useful technique for generating random, but natural-seeming transitions for textures or a huge number of other applications. Minecraft uses noise-like fractal functions to generate its world. Go through these examples thoroughly if you're new to Perlin Noise.
+
 **References:**
 
 [Ken Perlin's presentation on noise](http://www.noisemachine.com/talk1/)
 
-#### BSP:
+### BSP:
 
 ![BSP](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/BSP.png)
+
+BSP is great for generating rooms. Think about how you might apply this technique to other sorts of shapes. 
+
+The final example sketch uses a combination of a walker agent and BSP to connect rooms. How might you make a cleaner version?
 
 **References:**
 
@@ -49,11 +54,23 @@ What else could you do with an agent?
 
 [More sophisticated example](http://gamedevelopment.tutsplus.com/tutorials/how-to-use-bsp-trees-to-generate-game-maps--gamedev-12268)
 
-#### Automata:
+### Automata:
 
 ![automata](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-05-procGen/images/automata-treasure.png)
 
+The classic Cellular Automata example is **John Conway's Game of Life**. The idea is that every position on a grid has a relationship to its neighbors - and it "lives" or "dies" based on the number of neighbors it has.
+
+We can use the basic idea to iterate through a space to generate walls when there are enough neighbors, and remove things when there aren't.
+
+This example code is the most advanced. Go for this one if you're comfortable with the others.
+
 **References:**
+
+[Game of Life](http://www.bitstorm.org/gameoflife/)
+
+[MIND BLOWN](https://www.youtube.com/watch?v=xP5-iIeKXE8)
+
+[Cellular Automata in 3D](http://cubes.io/)
 
 [Roguebasin article on the topic](http://www.roguebasin.com/index.php?title=Cellular_Automata_Method_for_Generating_Random_Cave-Like_Levels)
 

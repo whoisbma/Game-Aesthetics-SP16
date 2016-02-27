@@ -6,14 +6,12 @@
 
 Play one of the following and pay attention to the world. Imagine how it was created. All but Dwarf Fortress or Spelunky classic costs money, but they are all pretty brilliant in different ways and IMO are worth it.
 
-* [Minecraft](https://minecraft.net/) ($)
-* [Proteus](http://twistedtreegames.com/proteus/) ($)
-* [Spelunky](http://www.spelunkyworld.com/) ($)
-* [Spelunky Classic](http://tinysubversions.com/game/spelunky/) (no $)
+* [Minecraft](https://minecraft.net/) ($) - if you still haven't tried it, play Minecraft.
+* [Proteus](http://twistedtreegames.com/proteus/) ($) - if you want something different.
+* [Spelunky](http://www.spelunkyworld.com/) ($) - if you like challenging gamey-games.
+* [Spelunky Classic](http://tinysubversions.com/game/spelunky/) (no $) - if you like challenging gamey-games and are broke.
+* [Dwarf Fortress](http://www.bay12games.com/dwarves/) (no $) - If you've played the others, play this. (for real)
 
-If you've played the others, play Dwarf Fortress. (for real)
-
-* [Dwarf Fortress](http://www.bay12games.com/dwarves/) (no $)
 
 **Make:**
 

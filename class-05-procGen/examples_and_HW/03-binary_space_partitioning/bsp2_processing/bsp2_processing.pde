@@ -1,5 +1,5 @@
-//QUADTREE PRINCIPLES 2
-//this sketch demonstrates how you might draw smaller rooms inside the areas that the quadtree carves out
+//BSP PRINCIPLES 2
+//this sketch demonstrates how you might draw smaller rooms inside the areas that the BSP carves out
 //we use a dynamic data structure (arraylist in this case) to push rooms to, then draw them all
 //in addition, each Room's constructor creates a new, smaller room.
 //you may be able to imagine how you might create hallways between them.

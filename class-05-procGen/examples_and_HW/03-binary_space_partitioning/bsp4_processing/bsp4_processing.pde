@@ -1,18 +1,20 @@
-//QUADTREE PRINCIPLES 4
-//this takes quadtree3, and adds a walker that gets created by each room.
+//BSP PRINCIPLES 4
+//this takes bsp3, and adds a walker that gets created by each room.
 //the walker moves around in steps of 3 looking for another room, then stops.
-//this is a very rudimentary implementation and not perfect, but it demonstrates a general idea.
+//we use a while loop to make sure that it moves around until it finds one.
+//this is a very rudimentary implementation and not perfect, but it demonstrates the general idea.
 
 int[][] grid;
-final int CELLSIZE = 6;
+final int CELLSIZE = 10;
 int GRIDW;
 int GRIDH;
 
-int numSteps = 3;
+int numSteps = 4;
 ArrayList<Room> rooms = new ArrayList<Room>();
 
 void setup() {
-  size(700, 500);
+  size(1000, 500);
+  noSmooth();
   GRIDW = width/CELLSIZE;
   GRIDH = height/CELLSIZE;
   grid = new int[GRIDW][GRIDH];
@@ -50,13 +52,13 @@ void draw() {
     for (int j = 0; j < GRIDW; j++) {
       if (grid[j][i] == 1) {
         //fill(255);
-        text('.',j*CELLSIZE, i*CELLSIZE + CELLSIZE/2);
+        text('.',j*CELLSIZE, i*CELLSIZE + CELLSIZE); //offsetting slightly for the text alignment
       } else if (grid[j][i] == 2) {
         //fill(150);
-        text('-',j*CELLSIZE, i*CELLSIZE + CELLSIZE/2);
+        text('-',j*CELLSIZE, i*CELLSIZE + CELLSIZE);
       } else {
         //fill(0);
-        text('#',j*CELLSIZE, i*CELLSIZE + CELLSIZE/2);
+        text('#',j*CELLSIZE, i*CELLSIZE + CELLSIZE);
       }
       //rect(j*CELLSIZE, i*CELLSIZE, CELLSIZE, CELLSIZE);
     }

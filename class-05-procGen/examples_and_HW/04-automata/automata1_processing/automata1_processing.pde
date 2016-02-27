@@ -1,3 +1,4 @@
+//tackle this one if you're comfortable with the others.
 
 final int COLS = 50;
 final int ROWS = 50;

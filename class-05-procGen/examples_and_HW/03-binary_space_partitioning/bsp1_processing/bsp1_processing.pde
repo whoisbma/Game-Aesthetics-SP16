@@ -1,5 +1,5 @@
-//QUADTREE PRINCIPLES
-//this sketch draws boxes according to a basic quadtree algorithm.
+//BSP PRINCIPLES
+//this sketch draws boxes according to a basic BSP algorithm.
 //its not a functional example in terms of our arrays,
 //but is meant to get the idea across.
 

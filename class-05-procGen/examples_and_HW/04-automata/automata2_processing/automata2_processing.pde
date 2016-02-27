@@ -1,3 +1,4 @@
+//press space to regenerate.
 
 final int COLS = 50;
 final int ROWS = 50;
@@ -18,27 +19,12 @@ void setup() {
 }
 
 void draw() {
-  //println(frameRate);
   drawWorld();
-  fill(255);
-  //ellipse(floodx*cellSize, floody*cellSize, cellSize, cellSize);
-  //floodFill(floodx, floody);
-  //queueFloodFill(floodx, floody);
-  //println(floodx + " " + floody);
-  //if (floody < ROWS) {
-  // if (floodx < COLS) {
-  //   floodx++;
-  // } else {
-  //   floodx = 0;
-  //   floody++;
-  // }
-  //}
-
-  //for (int i = 0; i < ROWS; i++) {
-  //  for (int j = 0; j < COLS; j++) {
-  //    queueFloodFill(i, j);
-  //  }
-  //}
+  
+  //something you might want to try is something i didn't get to in this code.
+  //run floodfill and when you encounter an area that is below a size limit, fill it in completely. 
+  //this way you're only left with one big area instead of a big area and a bunch of small ones, for example.
+  
 }
 
 void keyPressed() {

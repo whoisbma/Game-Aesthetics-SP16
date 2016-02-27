@@ -1,5 +1,5 @@
-//QUADTREE PRINCIPLES 3
-//this is the same approach as in quadtree2, 
+//BSP PRINCIPLES 3
+//this is the same approach as in bsp2, 
 //except now we apply it to the grid!
 
 boolean[][] grid;

@@ -1,6 +1,6 @@
 #### Procedural Content Generation
 
-In the very end of the last class, we very briefly talked about a simple method to create a random result in our 2D arrays via a random walker.
+In the very end of the last class, we very briefly talked about a simple method to create a random result in our 2D arrays via a random walker. We could use that result
 
 the algorithmical creation of game content with limited or indirect user input
 

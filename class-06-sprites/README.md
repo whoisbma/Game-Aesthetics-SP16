@@ -23,9 +23,15 @@ The video hardware gives the 2600 a reputation as one of the most complex game c
 In early video gaming, hardware sprites were a method of compositing separate bitmaps so that they appear to be part of a single image on a screen. A hardware sprite is where you use the game system sprite/object
 hardware to display a sprite.
 
+
+
 #### Software Sprites
 
 
+
+#### Indexed Color
+
+https://en.wikipedia.org/wiki/Indexed_color
 
 #### NES
 
@@ -36,6 +42,8 @@ Sprites on the NES were limited to 4 colors (or 3 colors + transparency)
 Tiles were usually 16x16
 
 Palette Cycling
+
+This kind of effect was common and quite easy to do on the NES since the programmer had access to the palette and the logical mapping between pixels and palette indices. On modern hardware, though, this is a bit more challenging because the concept of palettes is not the same.
 
 http://www.effectgames.com/demos/canvascycle/?sound=0
 

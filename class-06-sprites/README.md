@@ -168,3 +168,9 @@ Why use spritesheets and a spritesheet renderer? Why not just draw images as you
 * texture sizes are usually power of 2. So if you have a 50x100px Sprite, you'll allocate textures with the size 64x128px or in the worse case 128x128px. That's just wasting graphics memory. Better pack all the sprites into a 1024x1024px texture, which would allow 20x10 sprites and you'll only lose 24 pixels horizontally and vertically.
 
 * reduce the amount of draw-calls on your GPU. Each draw call has a certain amount of overhead. By using sprite sheets you can batch the drawing of things that aren't using the same frame of an animation (or more generally, everything that's on the same material) greatly enhancing performance. This may not matter too much for modern PCs depending on your game, but it definitely matters on, say, the iPhone.
+
+#### OFX Sprite Sheet Renderer
+
+[sprite sheet renderer addon for OF](https://github.com/stfj/ofxSpriteSheetRenderer)
+
+sprites for example from http://www.wiizelda.net/images/oos/oracleofseasons-sprites-sheet-1.png

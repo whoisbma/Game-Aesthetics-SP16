@@ -1,24 +1,29 @@
 #include "ofApp.h"
 
 
-void ofApp::spaceFree(int dir) {
-    
-    switch (dir) {
-        case 0:
-            break;
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        default:
-            break;
-    }
+//void ofApp::spaceFree(int dir) {
+//    
+//    switch (dir) {
+//        case 0:
+//            break;
+//        case 1:
+//            break;
+//        case 2:
+//            break;
+//        case 3:
+//            break;
+//        default:
+//            break;
+//    }
+//}
+
+// comparison routine for sort...
+bool sortVertically(basicSprite * a, basicSprite * b ) {
+    return a->pos.y > b->pos.y;
 }
 
 int ofApp::getTileName(int x, int y) {
-    return backgrounds[y * 30 + x]->tileName;
+    return backgrounds[y * GRIDW + x]->tileName;
 }
 
 
@@ -35,8 +40,8 @@ void ofApp::setup(){
     link->animation = walkAnimation;
     link->animation.index = 6;
     
-    for (int i = 0; i < 30; i++) {
-        for (int j = 0; j < 30; j++) {
+    for (int i = 0; i < GRIDH; i++) {
+        for (int j = 0; j < GRIDW; j++) {
             basicSprite * newSprite = new basicSprite();
             newSprite->pos.set(j*spriteRenderer->getTileSize()*SCALE, i*spriteRenderer->getTileSize()*SCALE);
             newSprite->tileName = (int)ofRandom(8,12);
@@ -51,18 +56,22 @@ void ofApp::setup(){
 void ofApp::update(){
     spriteRenderer->clear();
     spriteRenderer->update(ofGetElapsedTimeMillis());
+
     
     spriteRenderer->addCenteredTile(&link->animation, link->pos.x - cameraCenter.x, link->pos.y - cameraCenter.y, 1, F_NONE, SCALE);
 
     if (backgrounds.size() > 0) {
         for (int i = backgrounds.size()-1; i>=0; i--) {
-            spriteRenderer->addCenteredTile(backgrounds[i]->tileName, 0, backgrounds[i]->pos.x, backgrounds[i]->pos.y, 0, 1, 1, F_NONE, SCALE);
+            if (backgrounds[i]->pos.x > 0 && backgrounds[i]->pos.x < ofGetWindowWidth() &&
+                backgrounds[i]->pos.y > 0 && backgrounds[i]->pos.y < ofGetWindowHeight()) {
+                spriteRenderer->addCenteredTile(backgrounds[i]->tileName, 0, backgrounds[i]->pos.x, backgrounds[i]->pos.y, 0, 1, 1, F_NONE, SCALE);
+            }
         }
     }
     
-    for (int i = 0; i < 30; i++) {
-        for (int j = 0; j < 30; j++) {
-            backgrounds[i * 30 + j]->pos.set(j*spriteRenderer->getTileSize()*SCALE - cameraCenter.x, i*spriteRenderer->getTileSize()*SCALE - cameraCenter.y);
+    for (int i = 0; i < GRIDH; i++) {
+        for (int j = 0; j < GRIDW; j++) {
+            backgrounds[i * GRIDW + j]->pos.set(j*spriteRenderer->getTileSize()*SCALE - cameraCenter.x, i*spriteRenderer->getTileSize()*SCALE - cameraCenter.y);
         }
     }
     
@@ -99,8 +108,8 @@ void ofApp::update(){
     
     cameraCenter.x = link->pos.x - ofGetWindowWidth()/2;
     cameraCenter.y = link->pos.y - ofGetWindowHeight()/2;
-    
-//    cout << "framerate: " << ofGetFrameRate() << endl;
+
+    cout << "framerate: " << ofGetFrameRate() << endl;
     
 }
 

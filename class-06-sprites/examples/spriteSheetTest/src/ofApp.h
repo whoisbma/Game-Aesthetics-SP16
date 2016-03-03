@@ -49,6 +49,9 @@ class ofApp : public ofBaseApp{
     ofPoint cameraCenter;
     
     const float SCALE = 3;
+    const int GRIDW = 30;
+    const int GRIDH = 30;
+    
     bool rightPressed;
     bool leftPressed;
     bool upPressed;

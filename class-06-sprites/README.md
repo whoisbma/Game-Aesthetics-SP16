@@ -182,7 +182,7 @@ Impostor is a term used instead of billboard if the billboard is meant to subtly
 
 #### Batched Spritesheets
 
-Why use spritesheets and a spritesheet renderer? Why not just draw images as you need them? Stack Overflow gives us some answers:
+Why use spritesheets and a spritesheet renderer? Why not just draw images as you need them? Stack Overflow gives us some answers (http://gamedev.stackexchange.com/questions/32910/what-is-the-technical-definition-of-sprite-batching):
 
 * Reduce the amount of draw-calls on your GPU. Each draw call has a certain amount of overhead. By using sprite sheets you can batch the drawing of things that aren't using the same frame of an animation (or more generally, everything that's on the same material) greatly enhancing performance. This may not matter too much for modern PCs depending on your game, but it definitely matters on, say, the iPhone.
 

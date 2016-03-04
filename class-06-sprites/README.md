@@ -381,6 +381,12 @@ and in a basicSprite called `player` it would look like this:
 spriteRenderer->addTile(&player->animation, player->pos.x, player->pos.y);
 ```
 
-*(The **& operator** is another thing related to our pointer situation and also assumes player is a pointer to the player object.)*
+*(The & operator is another thing related to our pointer situation and also assumes player is a pointer to the player object.)*
+
+##### Test example
 
 ![link](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/test.png)
+
+The test code loads a vector (a fancy array) of stationary sprites to serve as the background, and a sprite representing the player into the renderer.
+
+It looks for key presses, and moves the player and camera position variables accordingly - and updates the background's position based on the camera position. This way we keep the player stationary in the center of the screen while the world moves around him. This is only one way of many to approach this.

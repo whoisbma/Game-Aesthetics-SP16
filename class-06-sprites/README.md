@@ -62,25 +62,21 @@ Only 8 bits of shape data for each sprite - required the processor to load the d
 Another clever hack in Yars Revenge:
 
 ![Yars Revenge](https://upload.wikimedia.org/wikipedia/en/8/85/A2600_Yars_Revenge.png)
+
 *graphics code from the program literally reading the game's own code as graphical data*
 
 People still making Atari games: 
 
-[A Slow Year](http://bogost.com/games/aslowyear/)
-
-[Halo 2600](http://www.codemystics.com/halo2600/)
-
-[Portal 2600](http://kotaku.com/5048537/portal-ported-to-the-atari-2600)
-
-[Mega Man 2600](https://www.youtube.com/watch?v=UvrpXc8C3S8)
+* [A Slow Year](http://bogost.com/games/aslowyear/)
+* [Halo 2600](http://www.codemystics.com/halo2600/)
+* [Portal 2600](http://kotaku.com/5048537/portal-ported-to-the-atari-2600)
+* [Mega Man 2600](https://www.youtube.com/watch?v=UvrpXc8C3S8)
 
 #### NES
 
 ![SMB1](http://blogs-images.forbes.com/erikkain/files/2014/06/mario-bros.jpg)
 
-![SMB3](http://cdn3.dualshockers.com/wp-content/uploads/2014/04/Super-Mario-Bros.-3.jpg)
-
-have a small number of sprite circuits, but can display more sprites; as soon as a circuit finishes displaying a sprite, it loads the parameters for the next sprite from memory)
+Devices like the NES had a small number of sprite circuits per (at the time) large amount of potential sprites to draw. As soon as a circuit finished displaying a sprite, it would load the parameters for the next sprite from memory.
 
 ![Palette](https://upload.wikimedia.org/wikipedia/en/8/80/NES_palette_color_test_chart.png)
 
@@ -105,13 +101,15 @@ have a small number of sprite circuits, but can display more sprites; as soon as
 
 ![waterfall](https://y1ln6w.dm2302.livefilestore.com/y2pINloLV_c1ecauZjHYMNES_5pznVqHod5KOKy_2nmqkN_LoxwRCQhvyPCI4VtrXb3qrD_H-7Xry11wotWOdSS4Ys1NAx44YjDPxjvbHMlidQ/Megaman%202%20Colour%20Cycling.gif?psid=1)
 
+*Palette cycling*
+
 ![sprites](http://orig08.deviantart.net/a1c7/f/2012/198/a/2/mega_man_pc_8_bit_sprites_by_phen01-d57m071.png)
 
-*Palette cycling*
+*Palette swapping*
 
 ![mario3 carmack](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/mario3PC.jpg)
 
-[John Carmack's Mario 3 PC prototype](http://arstechnica.com/gaming/2015/12/heres-what-id-softwares-pc-port-of-mario-3-could-have-looked-like/) - [video](https://vimeo.com/148909578)
+[John Carmack's Mario 3 PC prototype illustrates the challenge of recreating on a PC the hardware capacities of the NES](http://arstechnica.com/gaming/2015/12/heres-what-id-softwares-pc-port-of-mario-3-could-have-looked-like/) - [video](https://vimeo.com/148909578)
 
 #### Software Sprites
 
@@ -124,24 +122,35 @@ Transparent color, mainly for systems with indexed color displays. This method d
 
 #### The Evolution of Sprites
 
-Modern devices lack support for hardware sprites but come with powerful 3D hardware - simulate sprites as textures on rectangles/quads.
+All a sprite truly is at this stage for most computing is a hardware construct being emulated in software. Modern devices do not have the hardware for "true" sprites but are able to simulate sprites as textures on rectangular shapes.
 
-Prior to the popularizing of true 3D graphics in the mid-late 1990s, many 2D games attempted to imitate the look of three-dimensionality with a variety of sprite production methods. These included:
+A sprite is not necessarily "pixel art" - its just a 2D graphic of any type being treated as a hardware sprite.
 
-- Rotoscoping: The filmed performances of live actors were sometimes used for creating sprites, most famously in the case of Prince of Persia which added a relative element of realism to a platform game. The method was used in a number of other fighting games, mostly in the mid 1990s.
+However, there were some interesting aesthetic explorations in the mid 90s as 2D games attempted to imitate a general 3D look with a variety of sprite production methods:
 
-- Claymation or the use of posable models which were used for characters that could not be portrayed by actors. Famous early examples include Goro of Mortal Kombat and various enemies from Doom. Used to a greater extent in games like Clay Fighter and Neverhood.
+**Rotoscoping:**
 
-- Pre-rendered CGI models: The earlist documented game which uses it extensively is the 1993 Amiga game Stardust. Later used to a great extent in PC real-time strategy and role-playing video game games prior to the move to real-time 3D. Since computers of the day could not run complex 3D graphics, footage of pre-rendered three-dimensional character models were often used which created a (relative) illusion of 3D.
+![prince of persia](http://media.boingboing.net/wp-content/uploads/2014/10/princeofpersiajumping.gif)
 
-More often sprite now refers to a partially transparent two dimensional animation that is mapped onto a special plane in a 3D scene. Unlike a texture map, the sprite plane is always perpendicular to the axis emanating from the camera. The image can be scaled to simulate perspective, rotated two dimensionally, overlapped with other objects, and be occluded, but it can only be viewed from a single angle.
+![prince of persia](http://www.welovedosgames.net/images/images/princerotoscope.jpg)
 
-The term sprite is often confused with low resolution 2D graphics drawn on a computer, also known as pixel art. However, sprite graphics (bitmaps) can be created from any imaginable source, including prerendered CGI, dynamic 3D graphics, vector art, and even text. Likewise, pixel art is created for many purposes other than as a sprite, such as video game backgrounds, textures, icons, websites, display art, comics, and T-shirts.
+**Claymation:**
 
+![Goro](http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/36/84/3684817ce84544a1e597020a7dff6eb3.jpg)
 
-With the advancement in computer graphics and improved power and resolution, actual pixel art sprites are becoming increasingly infrequent outside of handheld game systems and cell phones.
+**Pre-rendered CGI models:** 
+
+![DKC](http://romhustler.net/img/screenshots/snes/ingame/508da389f2ed5.JPG)
+
+In addition, sprites still have an important role with the advent of 3D renderering - first to fill out a scene that only had limited ability to display lots of 3D like in Final Fantasy VII's prerendered backgrounds, and also in the use of billboarding - sprites rotated to always face the camera in a 3D scene.
+
+![Oblivion](http://staticdelivery.nexusmods.com/mods/101/images/30313-5-1267785898.jpg)
+
+*All grass/plants and leaves in Oblivion are sprites that always face the camera*
 
 #### Synonyms
+
+From Wikipedia:
 
 * **Player-Missile Graphics** was a term used by Atari, Inc. for hardware-generated sprites in the company's early coin-op games, the Atari 2600 and 5200 consoles and the Atari 8-bit computers. The term reflected the usage for both characters ("players") and other objects ("missiles"). They had restricted horizontal size (8 or 2 pixels, albeit with scalability) and vertical size equal to height of the entire screen.
 
@@ -228,9 +237,15 @@ I believe for this addon spritesheets need to be square and powers of two. (4x4,
 
 ![index0](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet1.png)
 
+Index 0 in a 64x64 spritesheet of 16x16 sprites
+
 ![index1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet2.png)
 
+Index 1
+
 ![index4](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet3.png)
+
+Index 4
 
 ##### Renderer Object
 

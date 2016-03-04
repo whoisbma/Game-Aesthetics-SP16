@@ -383,4 +383,4 @@ spriteRenderer->addTile(&player->animation, player->pos.x, player->pos.y);
 
 *(The **& operator** is another thing related to our pointer situation and also assumes player is a pointer to the player object.)*
 
-![link](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/link.png)
+![link](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/test.png)

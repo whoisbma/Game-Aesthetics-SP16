@@ -226,11 +226,11 @@ I believe for this addon spritesheets need to be square and powers of two. (4x4,
 ![link spritesheet](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/examples/spriteSheetTest/bin/data/link.png)
 
 
-![index0](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet.png)
+![index0](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet1.png)
 
-![index1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet1.png)
+![index1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet2.png)
 
-![index4](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet2.png)
+![index4](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet3.png)
 
 ##### Renderer Object
 

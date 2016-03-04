@@ -75,3 +75,9 @@ Look at this beautiful map from Final Fantasy 6 - each tile connects seamlessly 
 Compare this to a screenshot from Ultima 1 where each tile is clearly intended to represent something discrete.
 
 ![Ultima 1](https://upload.wikimedia.org/wikipedia/en/b/be/Ultima1-1.gif)
+
+#### Inspiration
+
+You can do some beautiful things with sprite sheet animation alone. This isn't a class about animation or pixel art, but its cool to look at some of the peaks of this approach and consider them formally.
+
+![metal slug 3](http://55.media.tumblr.com/cf324dab8d9b4e3ab5ea2a716bd618ae/tumblr_inline_nplcoqCycL1ri065t_500.gif)

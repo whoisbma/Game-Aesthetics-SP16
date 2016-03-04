@@ -3,6 +3,16 @@
 #include "ofMain.h"
 #include "ofxSpriteSheetRenderer.h"
 
+struct basicSprite {
+    int tileName; //which tile to draw?
+    ofPoint pos; //tile position
+};
+
+struct animatingSprite {
+    animation_t animation;
+    ofPoint pos;
+};
+
 static animation_t walkAnimation = {
     0,  //.index
     0,  //.frame
@@ -14,13 +24,6 @@ static animation_t walkAnimation = {
     -1, //.loops
     -1, //.finalindex
     1   //.frameskip
-};
-
-struct basicSprite {
-    animation_t animation;
-    int tileName; //used for static sprites?
-    ofPoint pos;
-    float speed;
 };
 
 class ofApp : public ofBaseApp{
@@ -41,23 +44,12 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-    
-    ofxSpriteSheetRenderer* spriteRenderer;
-    basicSprite * link;
+		
+    ofxSpriteSheetRenderer * spriteRenderer;
     vector<basicSprite *> backgrounds;
-    ofPoint playerpos;
-    ofPoint cameraCenter;
+    animatingSprite * player;
     
     const float SCALE = 3;
-    const int GRIDW = 30;
-    const int GRIDH = 30;
     
-    bool rightPressed;
-    bool leftPressed;
-    bool upPressed;
-    bool downPressed;
     
-    void spaceFree(int dir);
-    int getTileName(int x, int y);
-		
 };

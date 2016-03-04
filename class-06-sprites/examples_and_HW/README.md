@@ -31,6 +31,12 @@ Similar to above - instead of moving around the palette itself, this one uses a 
 
 In this example, we draw tiles based on their positions relative to other tiles.
 
+Look at the difference between these two maps:
+
+[world tiles](http://i.imgur.com/jdI4C5C.jpg)
+
+[civ 2](http://i.kinja-img.com/gawker-media/image/upload/s--_TmiXWnE--/c_scale,fl_progressive,q_80,w_800/17pk61o1ohtf2jpg.jpg)
+
 #### ofxSpriteSheetRenderer spriteSheetExample
 
 This is the code from the ofx addon example, updated to work smoothly with the latest version of openframeworks.

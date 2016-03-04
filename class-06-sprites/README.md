@@ -238,18 +238,19 @@ I believe for this addon spritesheets need to be square and powers of two. (4x4,
 
 ![link spritesheet](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/examples/spriteSheetTest/bin/data/link.png)
 
+*The actual fullsize spritesheet*
 
 ![index0](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet1.png)
 
-Index 0 in a 64x64 spritesheet of 16x16 sprites
+*Index 0 in a 64x64 spritesheet of 16x16 sprites*
 
 ![index1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet2.png)
 
-Index 1
+*Index 1*
 
 ![index4](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet3.png)
 
-Index 4
+*Index 4*
 
 ##### Renderer Object
 
@@ -336,6 +337,7 @@ struct basicSprite {
     float speed;
 };
 ```
+
 This `animation_t` is the important part. This is what we'll send to the renderer so it knows what to draw. Again, this is an arbitrary data value and it could float around independent of any classes, but in this case its being packaged with `basicSprite` to keep things together.
 
 We can create instances of `animation_t` with different values, like:
@@ -367,6 +369,7 @@ static animation_t swimAnimation = {
     1   //.frameskip
 };
 ```
+
 And then when we want to change the sprite's animation, we just assign its `animation_t` instance to walk or swim.
 
 Sending this animation to renderer apart from any objects would look something like this:
@@ -390,3 +393,5 @@ spriteRenderer->addTile(&player->animation, player->pos.x, player->pos.y);
 The test code loads a vector (a fancy array) of stationary sprites to serve as the background, and a sprite representing the player into the renderer.
 
 It looks for key presses, and moves the player and camera position variables accordingly - and updates the background's position based on the camera position. This way we keep the player stationary in the center of the screen while the world moves around him. This is only one way of many to approach this.
+
+Additionally, all of the sprites are scaled 3x up, and positions etc. are appropriately modified.

@@ -236,9 +236,7 @@ A spritesheet is a collection of graphics organized on a grid in a single image.
 
 I believe for this addon spritesheets need to be square and powers of two. (4x4, 8x8, 16x16, 32x32, 64x64, 128x128, 256x256, etc.) - this is because of how the graphics pipeline handles textures.
 
-![link spritesheet](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/examples/spriteSheetTest/bin/data/link.png)
-
-*The actual fullsize spritesheet*
+*The actual fullsize spritesheet (64x64):* ![link spritesheet](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/examples/spriteSheetTest/bin/data/link.png)
 
 ![index0](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet1.png)
 
@@ -394,4 +392,4 @@ The test code loads a vector (a fancy array) of stationary sprites to serve as t
 
 It looks for key presses, and moves the player and camera position variables accordingly - and updates the background's position based on the camera position. This way we keep the player stationary in the center of the screen while the world moves around him. This is only one way of many to approach this.
 
-Additionally, all of the sprites are scaled 3x up, and positions etc. are appropriately modified.
+Additionally, all of the sprites are scaled 3x up, and positions etc. are appropriately modified.**

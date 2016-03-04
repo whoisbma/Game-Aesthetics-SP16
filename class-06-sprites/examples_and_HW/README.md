@@ -50,6 +50,8 @@ The code is fully commented to explain each part. As in the sprite sheet example
 
 ![link](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/test.png)
 
+*Advanced: notice our movement code is quite flawed. If you move at an angle, the player moves at double speed. How would you fix this?*
+
 #### Context-sensitive tile selection
 
 In this example, we draw tiles based on their positions relative to other tiles.

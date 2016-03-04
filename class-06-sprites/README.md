@@ -148,7 +148,11 @@ In addition, sprites still have an important role with the advent of 3D renderer
 
 *All grass/plants and leaves in Oblivion are sprites that always face the camera*
 
-#### Synonyms
+#### Sprites vs. Background Tiles
+
+Even though we talk about sprites as being independent from a background, we can also use a "sprite" approach to draw our backgrounds in these frameworks. For example, in the OF addon we'll be using below, there's no real difference between a moveable sprite and a background sprite - just how we're using them, what layers we're attaching them to, and so on.
+
+#### Synonyms Trivia
 
 From Wikipedia:
 
@@ -378,3 +382,5 @@ spriteRenderer->addTile(&player->animation, player->pos.x, player->pos.y);
 ```
 
 *(The **& operator** is another thing related to our pointer situation and also assumes player is a pointer to the player object.)*
+
+![link](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/link.gif)

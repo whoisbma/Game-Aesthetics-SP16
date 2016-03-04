@@ -9,7 +9,9 @@
 
 Some ideas:
 
-* Try context-sensitive
+* Try tile sprites that diverge from grid logic entirely, but still use the grid to draw. What if tiles were a full screen image with transparency?
+* Try an [isometric tiling system](http://flarerpg.org/tutorials/isometric_intro/).
+* Try context-sensitive tile placement - see below.
 
 #### Palette Cycling
 
@@ -27,6 +29,16 @@ Code is included if you want to poke at it.
 
 Similar to above - instead of moving around the palette itself, this one uses a shader to point the color of a sprite to a different position on the palette entirely.
 
+#### ofxSpriteSheetRenderer spriteSheetExample
+
+This is the code from the ofx addon example, updated to work smoothly with the latest version of openframeworks.
+
+#### ofxSpriteSheetRenderer zelda
+
+This example draws a background layer of sprites and a player sprite in the foreground.
+
+![link](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/test.png)
+
 #### Context-sensitive tile selection
 
 In this example, we draw tiles based on their positions relative to other tiles.
@@ -37,12 +49,4 @@ Look at the difference between these two maps:
 
 ![civ 2](http://i.kinja-img.com/gawker-media/image/upload/s--_TmiXWnE--/c_scale,fl_progressive,q_80,w_800/17pk61o1ohtf2jpg.jpg)
 
-#### ofxSpriteSheetRenderer spriteSheetExample
-
-This is the code from the ofx addon example, updated to work smoothly with the latest version of openframeworks.
-
-#### ofxSpriteSheetRenderer zelda
-
-This example draws a background layer of sprites and a player sprite in the foreground.
-
-![link](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/test.png)
+In the lower map, the borders between tiles are indistinct. This is because when the world is generated, it draws specific tiles based on their position relative to other tiles. We could do this with the same approach you would take in 

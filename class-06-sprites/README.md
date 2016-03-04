@@ -24,7 +24,6 @@ In early video gaming, hardware sprites were a hardware feature which would comp
 
 Sprite graphics were more efficient for moving graphics, typically requiring 1/3 the memory cycles as only image data needed to be fetched.
 
-* The screen as an array of pixels, the framebuffer
 * Modifying a framebuffer held in RAM needs more memory cycles to load and store pixels, plus mask, and refresh background behind moving objects, also double buffering ideally to avoid tearing/flickering
 * Most sprite systems used a separate group of circuitry for every sprite they could show on a scanline, including a horizontal position trigger and shift register or other way to send out data sequentially.
 * When the raster scan reached the appropriate place, the circuitry would start shifting out the shape data for the sprite

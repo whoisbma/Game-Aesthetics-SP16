@@ -61,3 +61,11 @@ Look at the difference between these two maps:
 ![civ 2](http://i.kinja-img.com/gawker-media/image/upload/s--_TmiXWnE--/c_scale,fl_progressive,q_80,w_800/17pk61o1ohtf2jpg.jpg)
 
 In the lower map, the borders between tiles are indistinct. This is because when the world is generated, it draws specific tiles based on their position relative to other tiles. We could do this with the same approach you would take in our previous cellular automata examples, or a match 3 comparison mechanic: look at all adjacent tiles, get their status, for each possibility, set a different sprite index.
+
+Look at this beautiful map from Final Fantasy 6 - each tile connects seamlessly to its neighbors. You could imagine a town procedural generation technique that does this programmatically.
+
+![ff6](http://wallpapercave.com/wp/JzJoZ4U.png)
+
+Compare this to a screenshot from Ultima 1 where each tile is clearly intended to represent something discrete.
+
+![Ultima 1](https://upload.wikimedia.org/wikipedia/en/b/be/Ultima1-1.gif)

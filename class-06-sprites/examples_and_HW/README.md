@@ -22,6 +22,8 @@ Some ideas:
 * Try context-sensitive tile placement - see below.
 * If you use the "camera" approach in the example, play with camera behavior. How would you recreate the camera behavior from Super Mario Bros.?
 
+[Check out sprite resources online](http://www.spriters-resource.com/)
+
 #### Palette Cycling
 
 ![waterfall](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/waterfall.gif)

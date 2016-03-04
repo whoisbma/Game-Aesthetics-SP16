@@ -241,8 +241,6 @@ A spritesheet is a collection of graphics organized on a grid in a single image.
 
 I believe for this addon spritesheets need to be square and powers of two. (4x4, 8x8, 16x16, 32x32, 64x64, 128x128, 256x256, etc.) - this is because of how the graphics pipeline handles textures.
 
-*The actual fullsize spritesheet (64x64):* ![link spritesheet](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/examples/spriteSheetTest/bin/data/link.png)
-
 ![index0](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet1.png)
 
 *Index 0 in a 64x64 spritesheet of 16x16 sprites*

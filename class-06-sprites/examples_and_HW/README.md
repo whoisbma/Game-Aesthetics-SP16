@@ -40,7 +40,7 @@ Code is included if you want to poke at it.
 
 Similar to above - instead of moving around the palette itself, this one uses a shader to point the color of a sprite to a different position on the palette entirely.
 
-An example found on [pixeldigest](http://pixeldigest.tumblr.com/post/102325543427/1-since-youve-ripped-a-bunch-of-boktai-do-you)
+An example found on [pixeldigest](http://pixeldigest.tumblr.com/post/102325543427/1-since-youve-ripped-a-bunch-of-boktai-do-you):
 
 ![boktai](http://55.media.tumblr.com/ccc52a0d01e09fccd6a75d1fba55e4a8/tumblr_inline_neuqws7kIf1ri065t.gif)
 

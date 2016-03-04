@@ -90,6 +90,10 @@ Devices like the NES had a small number of sprite circuits per (at the time) lar
 * 8 sprites per scanline at once (if more than 8 sprites are drawn on a horizontal line of pixels across the screen (a scanline), only 8 can be visible)
 * Can flip sprites, but no rotation
 
+![Megaman flicker](http://55.media.tumblr.com/89fda9b6ea0313a552175f729cf153e5/tumblr_inline_mzvvzjxUoe1ri065t.gif)
+
+*Flickering- too many sprites per scanline*
+
 ![Megaman2](http://yachtclubgames.com/wp-content/uploads/2014/06/mm2dragon.jpg)
 
 *Big bosses as background tile layers*

@@ -9,6 +9,7 @@
 
 Some ideas:
 
+* If you haven't yet, try implementing a collision system for a player approach.
 * Try tile sprites that diverge from grid logic entirely, but still use the grid to draw. What if tiles were a large image with transparency? An abstract shape?
 * Try an [isometric tiling system](http://flarerpg.org/tutorials/isometric_intro/).
 * Try context-sensitive tile placement - see below.

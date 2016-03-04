@@ -47,7 +47,7 @@ The Atari VCS, released in 1977, features a hardware sprite implementation where
 
 Only 8 bits of shape data for each sprite - required the processor to load the data in real time anywhere it was supposed to change.
 
-![Pitfall](https://en.wikipedia.org/wiki/Pitfall!#/media/File:A2600_Pitfall.png)
+![Pitfall](https://upload.wikimedia.org/wikipedia/en/5/54/A2600_Pitfall.png)
 
 - 128 bytes of RAM for run-time data, including call stack and game world state. 
 - No room for frame buffer.
@@ -174,3 +174,192 @@ Why use spritesheets and a spritesheet renderer? Why not just draw images as you
 [sprite sheet renderer addon for OF](https://github.com/stfj/ofxSpriteSheetRenderer)
 
 sprites for example from http://www.wiizelda.net/images/oos/oracleofseasons-sprites-sheet-1.png
+
+The basic idea for the ofxSpriteSheetRenderer is that instead of drawing our objects ourselves, they get batched and sent off to the renderer object to be handled more efficiently. This means instead of doing something like:
+
+```
+//display everything
+world.display();
+player.update();
+player.display();
+for (int i = 0; i < enemies.length; i++) {
+	enemies[i].update();
+	enemies[i].display();
+} 
+```
+
+the draw process will look something more like this:
+
+```
+renderer.add(world);
+renderer.add(player);
+for (int i = 0; i < enemies.length; i++) {
+	renderer.add(enemies[i]);
+}
+renderer.update();
+renderer.draw();
+```
+
+This is because draw calls to the GPU get computationally heavy over time, and by having a renderer batch our draw calls, we lessen the load considerably. ofxSpriteSheetRenderer is a solid application of this. Unfortunately there's no analoguous library in Processing at the moment, to the best of my knowledge.
+
+The basic method for getting the ofxSpriteSheetRenderer to display and animate sprites is:
+
+*Setup:*
+
+1. create a spritesheet, put in bin/data
+2. create renderer object in setup
+3. load spritesheet texture in renderer object in setup
+
+*Each frame:*
+
+1. clear renderer
+2. update renderer with current time
+3. use renderer's `add` method to send sprites and animation information to the renderer
+4. call renderer's draw method
+
+##### Spritesheets and how to make them
+
+A spritesheet is a collection of graphics organized on a grid in a single image. The spritesheet renderer will pull from this image to draw whatever we need.
+
+I believe for this addon spritesheets need to be square and powers of two. (4x4, 8x8, 16x16, 32x32, 64x64, 128x128, 256x256, etc.) - this is because of how the graphics pipeline handles textures.
+
+![link spritesheet](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/examples/spriteSheetTest/bin/data/link.png)
+
+
+![index0](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet.png)
+
+![index1](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet1.png)
+
+![index4](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spritesheet2.png)
+
+##### Renderer Object
+
+The renderer object in this OF addon is called ofxSpriteSheetRenderer, and it has a few important methods.
+
+You would typically create only one. I can't quite imagine a scenario where you'd want to maintain multiple sprite renderers but maybe you can come up with one.
+
+In **ofApp.h**:
+
+```
+ofxSpriteSheetRenderer* spriteRenderer;
+```
+
+*(don't worry too much about the ** * symbol** if you're not familiar with pointers - just follow this convention for now. We'll talk more about them later if we end up doing more C++ in the class.)*
+
+In **ofApp.cpp's setup method**:
+
+```
+spriteRenderer = new ofxSpriteSheetRenderer(1, 10000, 0, 16);
+```
+
+Constructor parameters:
+
+1: number of layers
+
+10000: max number of sprites per layer
+
+0: default layer for sprites
+
+16: the size of the sprites in your spritesheet.
+
+If you wanted a game with multiple layers independent of one another, you would crank up the first argument. If you had a spritesheet with giant sprites like 256x256, you would change the final argument.
+
+Another two lines you probably want to include in your setup to have a more pixel-art focused aesthetic:
+
+```
+ofEnableAlphaBlending();
+ofDisableAntiAliasing();
+```
+
+In **ofApp.cpp's update method**:
+
+```
+spriteRenderer->clear();
+spriteRenderer->update(ofGetElapsedTimeMillis());
+```
+
+*Similarly, don't worry too much about the **-> method** call approach. This is basically the same thing as calling a class method via the dot operator - like player.update() or enemy.attack(). It just means we're calling the method of an object referred to by a pointer.*
+
+Finally in the same method, there are two basic ways of sending a sprite to the renderer.
+
+In the first, we give an integer represeting the index of the sprite sheet that we want to draw. If we want to draw the top left sprite, the index would be 0. To get the one immediately to the right of it, the index would be 1, etc. This is followed by the x and y position of the sprite we want to draw. This means we will draw a non-animating sprite.
+
+```
+spriteRenderer->addTile(spriteSheetIndex, mySpriteX, mySpriteY);
+```
+
+In the second approach, we don't send a sprite sheet index, instead attaching animation data, then the x and y position. The animation data contains all the info about which sprite on the sprite sheet to draw, and how this changes over time. More info on it in the next section.
+
+```
+spriteRenderer->addTile(myAnimation, mySpriteX, mySpriteY);
+```
+
+There are more ways to send tiles to the renderer. The full method call for addTile includes a ton more options that are given default values that can be overriden, like a tint color, a flip direction, and which layer to draw to:
+
+```
+bool addTile(animation_t* sprite, float x, float y, int layer = -1, flipDirection f = F_NONE, int r=255, int g=255, int b=255, int alpha=255);
+
+bool addTile(int tile_name, int frame, float x, float y, int layer = -1, float w = 1, float h = 1, flipDirection f = F_NONE,int r=255, int g=255, int b=255, int alpha=255);
+```
+
+Finally there are more methods still, like `addCenteredTile`, `addRotatedTile`, and `addCenterRotatedTile`. See the ofxSpriteSheetRenderer class for all the info.
+
+##### Sprite objects / Animation objects
+
+There is no class or object type for sprites. You can send anything to the renderer, like if you had an x and y variable just floating around in your code somewhere, and an arbitrary index for a sprite. However it is smart to make a class to hold whatever object information you want. 
+
+In the addon example this class (actually a **struct** - essentially a class without methods) `basicSprite`, and contains an ofPoint to store position, a float to store speed, and also another struct called an `animation_t`.
+
+```
+struct basicSprite {
+    animation_t animation;
+    ofPoint pos;
+    float speed;
+};
+```
+This `animation_t` is the important part. This is what we'll send to the renderer so it knows what to draw. Again, this is an arbitrary data value and it could float around independent of any classes, but in this case its being packaged with `basicSprite` to keep things together.
+
+We can create instances of `animation_t` with different values, like:
+
+```
+static animation_t walkAnimation = {
+    0,  //.index (starts drawing at index 0 on the spritesheet)
+    0,  //.frame
+    2,  //.totalframes  (2 frames in this animation)
+    1,  //.width
+    1,  //.height
+    90, //.frameduration  (90 millis per frame)
+    0,  //.nexttick
+    -1, //.loops (infinite loops)
+    -1, //.finalindex
+    1   //.frameskip
+};
+
+static animation_t swimAnimation = {
+    10,  //.index (changed index means pointing to another sprite on the spritesheet!)
+    0,  //.frame
+    4,  //.totalframes (4 frames in this animation)
+    1,  //.width
+    1,  //.height
+    90, //.frameduration
+    0,  //.nexttick
+    -1, //.loops
+    -1, //.finalindex
+    1   //.frameskip
+};
+```
+And then when we want to change the sprite's animation, we just assign its `animation_t` instance to walk or swim.
+
+Sending this animation to renderer apart from any objects would look something like this:
+
+```
+spriteRenderer->addTile(swimAnimation, someX, someY);
+```
+
+and in a basicSprite called `player` it would look like this:
+
+```
+spriteRenderer->addTile(&player->animation, player->pos.x, player->pos.y);
+```
+
+*(The **& operator** is another thing related to our pointer situation and also assumes player is a pointer to the player object.)*

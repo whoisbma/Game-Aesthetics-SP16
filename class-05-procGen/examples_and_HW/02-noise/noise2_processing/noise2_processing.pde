@@ -22,14 +22,14 @@ in an example like this, where we use noise to generate "land",
 we wouldn't want it running every frame in the draw loop, we'd want it to only create the world once.
 */
 
-int[][] grid;   
-//String[][] lands;
+//int[][] grid;   
+String[][] lands;
 int cellsize = 10;
 
 void setup() {
   size(640, 480);
-  grid = new int[width/cellsize][height/cellsize];
-  //lands = new String[width/cellsize][height/cellsize];
+  //grid = new int[width/cellsize][height/cellsize];
+  lands = new String[width/cellsize][height/cellsize];
   //noiseSeed(0);
   
   background(0);
@@ -44,17 +44,17 @@ void setup() {
       yoff += increment;
       float noiseVal = noise(xoff, yoff);
       if (noiseVal < 0.4) {
-        grid[x][y] = 0;
-        //lands[x][y] = "ocean";
+        //grid[x][y] = 0;
+        lands[x][y] = "ocean";
       } else if (noiseVal >= 0.4 && noiseVal < 0.65) {
-        grid[x][y] = 120;
-        //lands[x][y] = "plains";
+        //grid[x][y] = 120;
+        lands[x][y] = "plains";
       } else if (noiseVal >= 0.65 && noiseVal < 0.85) {
-        grid[x][y] = 180;
-        //lands[x][y] = "hills";
+        //grid[x][y] = 180;
+        lands[x][y] = "hills";
       } else if (noiseVal >= 0.85) {
-        grid[x][y] = 255;
-        //lands[x][y] = "mountains";
+        //grid[x][y] = 255;
+        lands[x][y] = "mountains";
       } 
     }
   }
@@ -65,25 +65,25 @@ void draw() {
   background(0);
   for (int i = 0; i < height/cellsize; i++) {
     for (int j = 0; j < width/cellsize; j++) {
-      fill(grid[j][i]);
-      noStroke();
-      rect(j*cellsize, i*cellsize, cellsize, cellsize);
+      //fill(grid[j][i]);
+      //noStroke();
+      //rect(j*cellsize, i*cellsize, cellsize, cellsize);
       
       //draw text instead of a rectangle, using the lands string to choose which one.
       //make sure to comment out the rect-drawing line above first.
-      //if (lands[j][i].equals("ocean")) {
-      //  fill(0,0,255);
-      //  text('~', j*cellsize, i*cellsize);
-      //} else if (lands[j][i].equals("plains")) {
-      //  fill(0,255,0);
-      //  text(',', j*cellsize, i*cellsize);
-      //} else if (lands[j][i].equals("hills")) {
-      //  fill(255,255,0);
-      //  text('^', j*cellsize, i*cellsize);
-      //} else if (lands[j][i]. equals("mountains")) {
-      //  fill(100);
-      //  text('/', j*cellsize, i*cellsize);
-      //}
+      if (lands[j][i].equals("ocean")) {
+       fill(0,0,255);
+       text('~', j*cellsize, i*cellsize);
+      } else if (lands[j][i].equals("plains")) {
+       fill(0,255,0);
+       text(',', j*cellsize, i*cellsize);
+      } else if (lands[j][i].equals("hills")) {
+       fill(255,255,0);
+       text('^', j*cellsize, i*cellsize);
+      } else if (lands[j][i]. equals("mountains")) {
+       fill(100);
+       text('/', j*cellsize, i*cellsize);
+      }
     }
   }
 }

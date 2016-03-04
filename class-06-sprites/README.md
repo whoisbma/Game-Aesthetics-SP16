@@ -37,9 +37,9 @@ Historical limitations:
 
 ![sprites](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/spriteoverview.jpg)
 
-Sprites were usually seen in conjunction with indexed "character map" backgrounds, also known as "tiles", as opposed to the more general, memory-hungry linear framebuffers that are ubiquitous today. These were also used for displaying text, where pages could be rapidly refreshed and scrolled by simply replacing a grid of character indices, at the expense of limited precision placement and character-set. Characters were often fonts held in ROM on non-gaming systems such as the IBM PC. The drive toward blitters happened with a move toward GUIs and WYSIWYG interfaces for productivity software.
+Sprites were usually seen in conjunction with indexed "character map" backgrounds, also known as "tiles", as opposed to the more general, memory-hungry linear framebuffers that are ubiquitous today. These were also used for displaying text, where pages could be rapidly refreshed and scrolled by simply replacing a grid of character indices, at the expense of limited precision placement and character-set. Characters were often fonts held in ROM on non-gaming systems such as the IBM PC.
 
-The downside of sprites is a limit of moving graphics per scanline, often between two (the Atari VCS) and eight (Commodore 64 and Atari 8-bits), and inability to update a permanent bitmap making them unsuitable for general desktop GUI acceleration. However, hardware sprites are still useful as a mouse pointer in a GUI, since the sprite requires no pixel manipulation of the desktop metaphor on screen. Though the Amiga includes a blitter its desktop GUI still uses a sprite for its mouse pointer.
+The downside of sprites is a limit of moving graphics per scanline, often between two (the Atari VCS) and eight (Commodore 64 and Atari 8-bits), and inability to update a permanent bitmap making them unsuitable for general desktop GUI acceleration. However, hardware sprites are still useful as a mouse pointer in a GUI, since the sprite requires no pixel manipulation of the desktop metaphor on screen.
 
 #### Atari 2600
 
@@ -111,14 +111,19 @@ Devices like the NES had a small number of sprite circuits per (at the time) lar
 
 [John Carmack's Mario 3 PC prototype illustrates the challenge of recreating on a PC the hardware capacities of the NES](http://arstechnica.com/gaming/2015/12/heres-what-id-softwares-pc-port-of-mario-3-could-have-looked-like/) - [video](https://vimeo.com/148909578)
 
+[More NES info here](http://noelberry.ca/nes)
+
 #### Software Sprites
+
+*From Wikipedia*
 
 Many popular home computers of the 1980s lack any support for sprites by hardware. The animated characters, bullets, pointing cursors, etc. for videogames (mainly) were rendered exclusively with the CPU by software, as part of the screen video memory in itself. Hence the term software sprites.
 
 Mainly, two distinct techniques were used to render the sprites by software, depending on the display hardware characteristics:
 
-Binary image masks, mainly for systems with bitmapped video frame buffers. It employs the use of an additional binary mask for every sprite displayed to create transparent areas within a sprite.
-Transparent color, mainly for systems with indexed color displays. This method defines a particular color index (typically index '0' or index '255') with a palletted display mode as a 'transparent color' which the blitter ignores when blitting the sprite to video memory or the screen.
+**Binary image masks**, mainly for systems with bitmapped video frame buffers. It employs the use of an additional binary mask for every sprite displayed to create transparent areas within a sprite.
+
+**Transparent color**, mainly for systems with indexed color displays. This method defines a particular color index (typically index '0' or index '255') with a palletted display mode as a 'transparent color' which the blitter ignores when blitting the sprite to video memory or the screen.
 
 #### The Evolution of Sprites
 
@@ -174,15 +179,15 @@ Impostor is a term used instead of billboard if the billboard is meant to subtly
 
 #### Batched Spritesheets
 
-Why use spritesheets and a spritesheet renderer? Why not just draw images as you need them?
+Why use spritesheets and a spritesheet renderer? Why not just draw images as you need them? Stack Overflow gives us some answers:
 
-* number of available textures on a graphic card can be limited. Therefore your graphics library would constantly have to remove texture and re-allocate textures on the GPU. It's much more efficient to just allocate a large texture once.
+* Reduce the amount of draw-calls on your GPU. Each draw call has a certain amount of overhead. By using sprite sheets you can batch the drawing of things that aren't using the same frame of an animation (or more generally, everything that's on the same material) greatly enhancing performance. This may not matter too much for modern PCs depending on your game, but it definitely matters on, say, the iPhone.
 
-* texture sizes are usually power of 2. So if you have a 50x100px Sprite, you'll allocate textures with the size 64x128px or in the worse case 128x128px. That's just wasting graphics memory. Better pack all the sprites into a 1024x1024px texture, which would allow 20x10 sprites and you'll only lose 24 pixels horizontally and vertically.
+* The number of available textures on a graphic card can be limited. Therefore your graphics library would constantly have to remove texture and re-allocate textures on the GPU. It's much more efficient to just allocate a large texture once.
 
-* reduce the amount of draw-calls on your GPU. Each draw call has a certain amount of overhead. By using sprite sheets you can batch the drawing of things that aren't using the same frame of an animation (or more generally, everything that's on the same material) greatly enhancing performance. This may not matter too much for modern PCs depending on your game, but it definitely matters on, say, the iPhone.
+* Texture sizes are usually power of 2. So if you have a 50x100px Sprite, you'll allocate textures with the size 64x128px or in the worse case 128x128px. That's just wasting graphics memory. Better pack all the sprites into a 1024x1024px texture, which would allow 20x10 sprites and you'll only lose 24 pixels horizontally and vertically.
 
-#### OFX Sprite Sheet Renderer
+### OFX Sprite Sheet Renderer
 
 [sprite sheet renderer addon for OF](https://github.com/stfj/ofxSpriteSheetRenderer)
 
@@ -230,7 +235,7 @@ The basic method for getting the ofxSpriteSheetRenderer to display and animate s
 3. use renderer's `add` method to send sprites and animation information to the renderer
 4. call renderer's draw method
 
-##### Spritesheets and how to make them
+#### Spritesheets and how to make them
 
 A spritesheet is a collection of graphics organized on a grid in a single image. The spritesheet renderer will pull from this image to draw whatever we need.
 
@@ -250,7 +255,7 @@ I believe for this addon spritesheets need to be square and powers of two. (4x4,
 
 *Index 4*
 
-##### Renderer Object
+#### Renderer Object
 
 The renderer object in this OF addon is called ofxSpriteSheetRenderer, and it has a few important methods.
 
@@ -262,7 +267,7 @@ In **ofApp.h**:
 ofxSpriteSheetRenderer* spriteRenderer;
 ```
 
-*(don't worry too much about the ** * symbol** if you're not familiar with pointers - just follow this convention for now. We'll talk more about them later if we end up doing more C++ in the class.)*
+*(don't worry too much about the *  symbol if you're not familiar with pointers - just follow this convention for now. We'll talk more about them later if we end up doing more C++ in the class.)*
 
 In **ofApp.cpp's setup method**:
 
@@ -322,7 +327,7 @@ bool addTile(int tile_name, int frame, float x, float y, int layer = -1, float w
 
 Finally there are more methods still, like `addCenteredTile`, `addRotatedTile`, and `addCenterRotatedTile`. See the ofxSpriteSheetRenderer class for all the info.
 
-##### Sprite objects / Animation objects
+#### Sprite objects / Animation objects
 
 There is no class or object type for sprites. You can send anything to the renderer, like if you had an x and y variable just floating around in your code somewhere, and an arbitrary index for a sprite. However it is smart to make a class to hold whatever object information you want. 
 
@@ -384,7 +389,7 @@ spriteRenderer->addTile(&player->animation, player->pos.x, player->pos.y);
 
 *(The & operator is another thing related to our pointer situation and also assumes player is a pointer to the player object.)*
 
-##### Test example
+#### Test example
 
 ![link](https://raw.githubusercontent.com/whoisbma/Game-Aesthetics-SP16/master/class-06-sprites/images/test.png)
 
@@ -392,4 +397,4 @@ The test code loads a vector (a fancy array) of stationary sprites to serve as t
 
 It looks for key presses, and moves the player and camera position variables accordingly - and updates the background's position based on the camera position. This way we keep the player stationary in the center of the screen while the world moves around him. This is only one way of many to approach this.
 
-Additionally, all of the sprites are scaled 3x up, and positions etc. are appropriately modified.**
+Additionally, all of the sprites are scaled 3x up, and positions etc. are appropriately modified.

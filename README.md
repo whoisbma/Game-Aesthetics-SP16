@@ -69,20 +69,20 @@ The final project is a game project that explores in depth at least one technica
 
 2/11: Code vs. data, file I/O, hacky tile editor, grid mechanics
 
-2/18: Roguelikes, converting the grid, cellular automata, dungeon generation, rudimentary collision
+2/18: Text-based user interfaces, converting the grid, Rogue
 
-2/25: Pathfinding, node maps, line of sight, ZZT, randomness/seeding, minimaxing, screen buffering
+2/25: Procedural generation, cellular automata, agents, binary space partition trees
 
-3/3: Grid puzzles, tiles, puzzlescript, turn-based game loop
+3/3: Sprites, sprite sheets, sprite batching, Atari 2600, NES limitations, ofxSpriteSheetRenderer
 
-3/10: Arcade games, maze generation, deltatime, keyboard handlers, continuous grid collision
+3/10: AI, ad hoc lists, state machines, decision trees, A* pathfinding, Pac-Man AI
 
-3/17: AI State machines and triggers, loading from data, more keyboard handlers, hashmap-based collision
+3/17: P5, Haxe intro
 
-3/31: Management games, camera/viewport, world generation, fairness/unfairness, perlin noise, inputs as command 
+3/31: Management games, camera/viewport, fairness/unfairness, inputs as command 
 objects
 
-4/7: Platformers, camera movement, interactive state machines, fuzzy logic, platformer physics, p5play, Haxe
+4/7: Platformers, camera movement, interactive state machines, fuzzy logic, platformer physics
 
 4/14: Raycast rendering
 

@@ -261,7 +261,7 @@ function draw() {
 
 Now for the hard part.
 
-### Raycasting Algorithm
+### Raycasting
 
 *Images, information, and some text coming from the excellent [lodev.org](http://lodev.org/cgtutor/raycasting.html) site.*
 
@@ -461,3 +461,5 @@ function draw() {
   lastTime = millis();
 }
 ```
+
+Full code is [here](https://gist.github.com/whoisbma/8fd99f3679d8246e74a22b20bfa606ee)!

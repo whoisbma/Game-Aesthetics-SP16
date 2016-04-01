@@ -291,11 +291,13 @@ Midimaze on the Atari ST (later/elsewhere known as Faceball 2000 etc.) was anoth
 
 ![faceball on gameboy](http://www.racketboy.com/images/faceball-2000-235x210.gif)
 
-Aesthetically related but not actual raycasting would be examples like the [Wizardry series](https://www.youtube.com/watch?v=kpQXViRZB54) or Eye of the Beholder. Check [this](http://wiki.mimicprod.net/doku.php?id=dungeoneye:mazerendering) out for an explanation.
+Aesthetically related but not actual raycasting would be examples like the [Wizardry series](https://www.youtube.com/watch?v=kpQXViRZB54) or Eye of the Beholder. 
 
 ![Wizardry](http://www.mobygames.com/images/shots/l/43910-wizardry-proving-grounds-of-the-mad-overlord-apple-ii-screenshot.gif)
 
 ![EotB](https://lh3.ggpht.com/-cjQXuy2qugU/USzF8wFmQqI/AAAAAAAAFqI/hJ2j6PswB9k/s1600/5327-dungeon-master-dos-screenshot-combat-s.gif)
+
+Check [this](http://wiki.mimicprod.net/doku.php?id=dungeoneye:mazerendering) out for an explanation of this particular technique (maze rendering).
 
 ##### The deeper explanation
 

@@ -295,9 +295,9 @@ Aesthetically related but not actual raycasting would be examples like the [Wiza
 
 ![Wizardry](http://www.mobygames.com/images/shots/l/43910-wizardry-proving-grounds-of-the-mad-overlord-apple-ii-screenshot.gif)
 
-![EotB](https://lh3.ggpht.com/-cjQXuy2qugU/USzF8wFmQqI/AAAAAAAAFqI/hJ2j6PswB9k/s1600/5327-dungeon-master-dos-screenshot-combat-s.gif)
-
 Check [this](http://wiki.mimicprod.net/doku.php?id=dungeoneye:mazerendering) out for an explanation of this particular technique (maze rendering).
+
+![EotB](https://lh3.ggpht.com/-cjQXuy2qugU/USzF8wFmQqI/AAAAAAAAFqI/hJ2j6PswB9k/s1600/5327-dungeon-master-dos-screenshot-combat-s.gif)
 
 ##### The deeper explanation
 

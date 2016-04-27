@@ -63,33 +63,32 @@ The final project is a game project that explores in depth at least one technica
 
 #### Weekly Schedule:
 
-1/28: Class intro, C++ and iostream, basic OOP, terminal interface
+Week 1- 1/28: Class intro, C++ and iostream, basic OOP, terminal interface
 
-2/4: Text adventures, interactive fiction, twine, text parsers, input-driven game loops
+Week 2- 2/4: Text adventures, interactive fiction, twine, text parsers, input-driven game loops
 
-2/11: Code vs. data, file I/O, hacky tile editor, grid mechanics
+Week 3- 2/11: Code vs. data, file I/O, hacky tile editor, grid mechanics
 
-2/18: Text-based user interfaces, converting the grid, Rogue
+Week 4- 2/18: Text-based user interfaces, converting the grid, Rogue
 
-2/25: Procedural generation, cellular automata, agents, binary space partition trees
+Week 5- 2/25: Procedural generation, cellular automata, agents, binary space partition trees
 
-3/3: Sprites, sprite sheets, sprite batching, Atari 2600, NES limitations, ofxSpriteSheetRenderer
+Week 6- 3/3: Sprites, sprite sheets, sprite batching, Atari 2600, NES limitations, ofxSpriteSheetRenderer
 
-3/10: AI, ad hoc lists, state machines, decision trees, A* pathfinding, Pac-Man AI
+Week 7- 3/10: AI, ad hoc lists, state machines, decision trees, A* pathfinding, Pac-Man AI
 
-3/17: P5, Haxe intro
+Week 8- 3/17: P5, P5Play, Haxe intro
 
-3/31: Management games, camera/viewport, fairness/unfairness, inputs as command 
-objects
+Week 9- 3/31: Raycast rendering
 
-4/7: Platformers, camera movement, interactive state machines, fuzzy logic, platformer physics
+Week 10- 4/7: Isometric rendering
 
-4/14: Raycast rendering
+Week 11- 4/14: Dynamic sound
 
-4/21: Voxels, BSP, pixel-perfect collision
+Week 12- 4/21: State machines
 
-4/28: Composition, juiciness
+Week 13- 4/28: Juiciness
 
-5/5: Final work
+Week 14- 5/5: Final work
 
-5/12: Final
+Week 15- 5/12: Final due

@@ -50,7 +50,7 @@ var spriteOrder = [];
 var spriteDistance = [];
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(800, 400);
   pos = createVector(12, 12);
   dir = createVector(0, 1);
   plane = createVector(1, 0);
@@ -60,10 +60,10 @@ function setup() {
 
   sprites = [{
     pos: createVector(13, 13)
-  // }, {
-  //   pos: createVector(11, 11)
-  // }, {
-  //   pos: createVector(13, 11)
+  }, {
+    pos: createVector(15, 11)
+  }, {
+    pos: createVector(13, 8)
   }];
 }
 
@@ -77,7 +77,7 @@ function draw() {
 
   update();
   raycast();
-  drawSprites();
+  castSprites();
 }
 
 function update() {
@@ -221,13 +221,32 @@ function raycast() {
     //set zbuffer position to wall dist
     zBuffer[x] = wallDist;
   }
-  
+
 }
 
-function drawSprites() {
+function compareSprites(a, b) {
+  return b.value-a.value;
+}
+
+function castSprites() {
+  //sort sprites
   for (var i = 0; i < sprites.length; i++) {
-    var spriteX = sprites[i].pos.x - pos.x;
-    var spriteY = sprites[i].pos.y - pos.y;
+    spriteOrder[i] = i;
+    spriteDistance[i] = ((pos.x - sprites[i].pos.x) * (pos.x - sprites[i].pos.x) + (pos.y - sprites[i].pos.y) * (pos.y - sprites[i].pos.y));
+  }
+  
+  var mappedOrder = spriteOrder.map(function(order, i) {
+    return {index: i, value: spriteDistance[i]};
+  });
+  mappedOrder.sort(compareSprites);
+  
+  for (var i = 0; i < mappedOrder.length; i++) {
+    spriteOrder[i] = mappedOrder[i].index;
+  }
+
+  for (var i = 0; i < sprites.length; i++) {
+    var spriteX = sprites[spriteOrder[i]].pos.x - pos.x;
+    var spriteY = sprites[spriteOrder[i]].pos.y - pos.y;
 
     var invDet = 1.0 / (plane.x * dir.y - dir.x * plane.y);
     var transformX = invDet * (dir.y * spriteX - dir.x * spriteY);
@@ -260,7 +279,7 @@ function drawSprites() {
     //draw every vertical stripe of the sprite on screen
     for (var stripe = drawStartX; stripe < drawEndX; stripe++) {
       if (transformY > 0 && stripe > 0 && stripe < width && transformY < zBuffer[stripe]) {
-        stroke(0);
+        stroke(spriteOrder[i] * 50);
         line(stripe, drawStartY, stripe, drawEndY);
       }
     }

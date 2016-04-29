@@ -247,11 +247,11 @@ function drawSprites() {
     }
 
     var spriteWidth = abs(floor(height / transformY));
-    var drawStartX = -spriteWidth / 2 + spriteScreenX;
+    var drawStartX = floor(-spriteWidth / 2 + spriteScreenX);
     if (drawStartX < 0) {
       drawStartX = 0;
     }
-    var drawEndX = spriteWidth / 2 + spriteScreenX;
+    var drawEndX = floor(spriteWidth / 2 + spriteScreenX);
     if (drawEndX >= width) {
       drawEndX = width - 1;
     }

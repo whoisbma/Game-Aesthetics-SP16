@@ -93,6 +93,11 @@ var tilesize = 70;
 var player;
 var solidSprites;
 
+var player_walk;
+var player_stand;
+var player_duck;
+var player_dive;
+
 function preload() {
   // Load the json for the tiles sprite sheet
   tile_frames = loadJSON('assets/tiles.json');
@@ -116,6 +121,36 @@ function preload() {
       "height": 94
     }
   }]));
+  
+  player_duck = loadAnimation(new SpriteSheet('assets/player_spritesheet.png', [{
+    "name": "player_stand",
+    "frame": {
+      "x": 352,
+      "y": 95,
+      "width": 70,
+      "height": 94
+    }
+  }]));
+  
+  player_jump = loadAnimation(new SpriteSheet('assets/player_spritesheet.png', [{
+    "name": "player_jump",
+    "frame": {
+      "x": 423,
+      "y": 95,
+      "width": 70,
+      "height": 94
+    }
+  }]));
+  
+  player_dive = loadAnimation(new SpriteSheet('assets/player_spritesheet.png', [{
+    "name": "player_jump",
+    "frame": {
+      "x": 423,
+      "y": 0,
+      "width": 70,
+      "height": 94
+    }
+  }]));
 }
 
 
@@ -134,7 +169,7 @@ function setup() {
       if (level[i][j] !== 0) {
         var tile = createSprite(j * tilesize, i * tilesize, tilesize, tilesize);
         tile.setCollider("rectangle", 0, 0, tilesize, tilesize);
-        tile.debug = true;
+        // tile.debug = true;
         solidSprites.add(tile);
       }
     }
@@ -174,7 +209,11 @@ function draw() {
   drawSprite(player.player_sprite);
   
   // fill(255,0,0);
-  // ellipse(player.player_sprite.position.x,
+  // ellipse(player.player_sprite.position.x + 20,
+  //   player.player_sprite.position.y + 40 + 1,
+  //   10, 10);
+    
+  // ellipse(player.player_sprite.position.x - 20,
   //   player.player_sprite.position.y + 40 + 1,
   //   10, 10);
 }

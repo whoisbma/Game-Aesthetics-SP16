@@ -251,8 +251,12 @@ function castSprites() {
     var invDet = 1.0 / (plane.x * dir.y - dir.x * plane.y);
     var transformX = invDet * (dir.y * spriteX - dir.x * spriteY);
     var transformY = invDet * (-plane.y * spriteX + plane.x * spriteY);
+    
+    // console.log(transformX);
 
     var spriteScreenX = floor((width / 2) * (1 + transformX / transformY));
+    
+    // console.log(spriteScreenX);
 
     //calculate height of the sprite on screen
     var spriteHeight = abs(floor(height / transformY));

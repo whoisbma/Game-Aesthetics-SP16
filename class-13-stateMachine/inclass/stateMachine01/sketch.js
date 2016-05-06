@@ -93,6 +93,12 @@ var tilesize = 70;
 var player;
 var solidSprites;
 
+var player_stand;
+var player_walk;
+var player_jump;
+var player_duck;
+var player_dive;
+
 function preload() {
   // Load the json for the tiles sprite sheet
   tile_frames = loadJSON('assets/tiles.json');
@@ -112,6 +118,34 @@ function preload() {
     "frame": {
       "x": 284,
       "y": 95,
+      "width": 70,
+      "height": 94
+    }
+  }]));
+  
+  player_jump = loadAnimation(new SpriteSheet('assets/player_spritesheet.png', [{
+    "name": "player_jump",
+    "frame": {
+      "x": 423,
+      "y": 95,
+      "width": 70,
+      "height": 94
+    }
+  }]));
+  player_duck = loadAnimation(new SpriteSheet('assets/player_spritesheet.png', [{
+    "name": "player_stand",
+    "frame": {
+      "x": 352,
+      "y": 95,
+      "width": 70,
+      "height": 94
+    }
+  }]));
+  player_dive = loadAnimation(new SpriteSheet('assets/player_spritesheet.png', [{
+    "name": "player_jump",
+    "frame": {
+      "x": 423,
+      "y": 0,
       "width": 70,
       "height": 94
     }

@@ -360,29 +360,29 @@ function castSprites() {
     // }
 
 
-    // for (var stripeY = drawStartY; stripeY < drawEndY; stripeY++) {
-    //   for (var stripeX = drawStartX; stripeX < drawEndX; stripeX++) {
-    //     if (transformY > 0 && stripeX > 0 && stripeX < PIXELWIDTH && transformY < zBuffer[stripeX]) {
-    //       var pixelPos = (PIXELWIDTH * stripeY + stripeX) * 4;
-    //       if (stripeX === drawStartX && stripeY === drawStartY) {
-    //         console.log(pixelPos % PIXELWIDTH);
-    //       }
-    //       pixels[pixelPos] = 100;//map(stripeY - drawStartY, 0, drawEndY - drawStartY, 0, 255);
-    //       pixels[pixelPos + 1] = 0;//map(stripeX - drawStartX, 0, drawEndX - drawStartX, 0, 255);
-    //       pixels[pixelPos + 2] = map(stripeX, 0, PIXELWIDTH, 0, 255);
-    //       pixels[pixelPos + 3] = 255;
-    //     }
-    //   }
-    // }
-
-    var start = 4 * drawStartX;
-    var end = 4 * drawEndX;
-    for (i = start; i < end; i+=4) {
-      pixels[i] = 255; //map(stripeY - drawStartY, 0, drawEndY - drawStartY, 0, 255);
-      pixels[i + 1] = 0; //map(stripeX - drawStartX, 0, drawEndX - drawStartX, 0, 255);
-      pixels[i + 2] = map(i, start, end, 0, 255);
-      pixels[i + 3] = 255;
+    for (var stripeY = drawStartY; stripeY < drawEndY; stripeY++) {
+      for (var stripeX = drawStartX; stripeX < drawEndX; stripeX++) {
+        if (transformY > 0 && stripeX > 0 && stripeX < PIXELWIDTH && transformY < zBuffer[stripeX]) {
+          var pixelPos = (PIXELWIDTH * stripeY + stripeX) * 4;
+          if (stripeX === drawStartX && stripeY === drawStartY) {
+            console.log(pixelPos % PIXELWIDTH);
+          }
+          pixels[pixelPos] = 100;//map(stripeY - drawStartY, 0, drawEndY - drawStartY, 0, 255);
+          pixels[pixelPos + 1] = 0;//map(stripeX - drawStartX, 0, drawEndX - drawStartX, 0, 255);
+          pixels[pixelPos + 2] = map(stripeX, 0, PIXELWIDTH, 0, 255);
+          pixels[pixelPos + 3] = 255;
+        }
+      }
     }
+
+    // var start = 4 * drawStartX;
+    // var end = 4 * drawEndX;
+    // for (i = start; i < end; i+=4) {
+    //   pixels[i] = 255; //map(stripeY - drawStartY, 0, drawEndY - drawStartY, 0, 255);
+    //   pixels[i + 1] = 0; //map(stripeX - drawStartX, 0, drawEndX - drawStartX, 0, 255);
+    //   pixels[i + 2] = map(i, start, end, 0, 255);
+    //   pixels[i + 3] = 255;
+    // }
 
   }
 

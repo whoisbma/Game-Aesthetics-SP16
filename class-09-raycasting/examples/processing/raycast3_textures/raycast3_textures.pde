@@ -535,7 +535,7 @@ void raycast() {
 
           //best glitch so far
           //for (int moreX = 1; moreX < rayWidth; moreX++) {
-          //  //buffer[(int)rayNum * (y + (int)startY) + x * moreX] = color(c, c, c);  
+          // buffer[(int)rayNum * (y + (int)startY) + x * moreX] = color(c, c, c);  
           //}
         }
       }

@@ -19,9 +19,9 @@ var worldMap = [
   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 1],
-  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1],
-  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1],
-  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1],
+  [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 2, 2, 2, 2, 1, 0, 1, 2, 2, 2, 2, 2, 0, 0, 1],
   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 1],
@@ -61,7 +61,7 @@ var YSKIP = 1;
 
 
 function setup() {
-  canvas = createCanvas(800, 300);
+  canvas = createCanvas(700,400);
   background(0);
   pos = createVector(12, 12);
   dir = createVector(0, 1);
@@ -69,7 +69,7 @@ function setup() {
   rot = 0;
   rotSpeed = 0.025;
   walkSpeed = 0.05;
-  pixelDensity(0.25);
+  pixelDensity(0.2);
 
   // this.webkitImageSmoothingEnabled = false;
   // this.mozImageSmoothingEnabled = false;
@@ -81,10 +81,10 @@ function setup() {
 
   sprites = [{
     pos: createVector(13, 13)
-      // }, {
-      //   pos: createVector(15, 11)
-      // }, {
-      // pos: createVector(13, 8)
+      }, {
+        pos: createVector(15, 11)
+      }, {
+      pos: createVector(13, 8)
   }];
 
   noStroke();
@@ -261,19 +261,6 @@ function raycast() {
     //set zbuffer position to wall dist
     zBuffer[x] = wallDist;
   }
-
-
-  // for (var x = 0; x < width / 2 * pixelDensity(); x++) {
-  //   for (var y = 0; y < height / 3  * pixelDensity(); y++) {
-  //     var c = random(255);
-  //     var index = (width * pixelDensity() * y + x) * 4;
-  //       pixels[index] = c;
-  //       pixels[index + 1] = 255 - c;
-  //       pixels[index + 2] = c;
-  //       pixels[index + 3] = 255;
-  //   }
-  // }
-
 }
 
 function compareSprites(a, b) {
@@ -305,14 +292,11 @@ function castSprites() {
     var spriteY = sprites[spriteOrder[i]].pos.y - pos.y;
 
     var invDet = 1.0 / (plane.x * dir.y - dir.x * plane.y);
-
     var transformX = invDet * (dir.y * spriteX - dir.x * spriteY);
     var transformY = invDet * (-plane.y * spriteX + plane.x * spriteY);
 
-
     var spriteScreenX = floor((PIXELWIDTH / 2) * (1 + transformX / transformY));
 
-    //calculate height of the sprite on screen
     var spriteHeight = abs(floor(PIXELHEIGHT / transformY));
 
     var drawStartY = -spriteHeight / 2 + PIXELHEIGHT / 2;
@@ -331,7 +315,6 @@ function castSprites() {
 
     var drawStartX = floor(-spriteWidth / 2 + spriteScreenX);
 
-
     if (drawStartX < 0) {
       drawStartX = 0;
     }
@@ -340,49 +323,17 @@ function castSprites() {
       drawEndX = PIXELWIDTH;
     }
 
-    // draw every vertical stripe of the sprite on screen
-    // for (var stripe = drawStartX; stripe < drawEndX; stripe++) {
-    //   if (transformY > 0 && stripe > 0 && stripe < width && transformY < zBuffer[floor(stripe * pixelDensity())]) {
-    //     stroke(spriteOrder[i] * 50);
-    //     line(stripe, drawStartY, stripe, drawEndY);
-    //   }
-    // }
-
-
-    // for (i = 20; i < PIXELHEIGHT-20; i++) {
-    //   for (j = 20; j < PIXELWIDTH-20; j++) {
-    //     pixelPos = (PIXELWIDTH * i + j) * 4;
-    //     pixels[pixelPos] = map(j, 20, PIXELWIDTH-20, 0, 255);
-    //     pixels[pixelPos + 1] = map(i, 20, PIXELHEIGHT-20, 0, 255); //map((moreY - y), 0, YSKIP, 0, 255);
-    //     pixels[pixelPos + 2] = 0;
-    //     pixels[pixelPos + 3] = 255;
-    //   }
-    // }
-
-
     for (var stripeY = drawStartY; stripeY < drawEndY; stripeY++) {
       for (var stripeX = drawStartX; stripeX < drawEndX; stripeX++) {
         if (transformY > 0 && stripeX > 0 && stripeX < PIXELWIDTH && transformY < zBuffer[stripeX]) {
-          var pixelPos = (PIXELWIDTH * stripeY + stripeX) * 4;
-          if (stripeX === drawStartX && stripeY === drawStartY) {
-            console.log(pixelPos % PIXELWIDTH);
-          }
-          pixels[pixelPos] = 100;//map(stripeY - drawStartY, 0, drawEndY - drawStartY, 0, 255);
-          pixels[pixelPos + 1] = 0;//map(stripeX - drawStartX, 0, drawEndX - drawStartX, 0, 255);
+          var pixelPos = (PIXELWIDTH * floor(stripeY) + stripeX) * 4;
+          pixels[pixelPos] = map(stripeY - drawStartY, 0, drawEndY - drawStartY, 0, 255);
+          pixels[pixelPos + 1] = map(stripeX - drawStartX, 0, drawEndX - drawStartX, 0, 255);
           pixels[pixelPos + 2] = map(stripeX, 0, PIXELWIDTH, 0, 255);
           pixels[pixelPos + 3] = 255;
         }
       }
     }
-
-    // var start = 4 * drawStartX;
-    // var end = 4 * drawEndX;
-    // for (i = start; i < end; i+=4) {
-    //   pixels[i] = 255; //map(stripeY - drawStartY, 0, drawEndY - drawStartY, 0, 255);
-    //   pixels[i + 1] = 0; //map(stripeX - drawStartX, 0, drawEndX - drawStartX, 0, 255);
-    //   pixels[i + 2] = map(i, start, end, 0, 255);
-    //   pixels[i + 3] = 255;
-    // }
 
   }
 

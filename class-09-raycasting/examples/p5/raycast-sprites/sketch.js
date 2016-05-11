@@ -52,6 +52,8 @@ var spriteDistance = [];
 var texWidth = 64;
 var texHeight = 64;
 
+var rayNum;
+
 var PIXELWIDTH;
 var PIXELHEIGHT;
 
@@ -61,7 +63,7 @@ var YSKIP = 1;
 
 
 function setup() {
-  canvas = createCanvas(700,400);
+  canvas = createCanvas(100, 50);
   background(0);
   pos = createVector(12, 12);
   dir = createVector(0, 1);
@@ -69,22 +71,23 @@ function setup() {
   rot = 0;
   rotSpeed = 0.025;
   walkSpeed = 0.05;
-  pixelDensity(0.2);
-
-  // this.webkitImageSmoothingEnabled = false;
-  // this.mozImageSmoothingEnabled = false;
-  // this.msImageSmoothingEnabled = false;
-  // this.imageSmoothingEnabled = false;
-  // noSmooth();
-
-  // console.log(this._renderer.drawingContext);
+  // pixelDensity(1);
+  noSmooth();
 
   sprites = [{
     pos: createVector(13, 13)
-      }, {
-        pos: createVector(15, 11)
-      }, {
-      pos: createVector(13, 8)
+  }, {
+    pos: createVector(15, 11)
+  }, {
+    pos: createVector(17, 9)
+  }, {
+    pos: createVector(4, 8)
+  }, {
+    pos: createVector(20, 3)
+  }, {
+    pos: createVector(5, 5)
+  }, {
+    pos: createVector(3, 11)
   }];
 
   noStroke();
@@ -110,6 +113,12 @@ function draw() {
 }
 
 function update() {
+  
+  for (var i = 0; i < sprites.length; i++) {
+    sprites[i].pos.x += random(-0.1,0.1);
+    sprites[i].pos.y += random(-0.1,0.1);
+  }
+  
   dir.x = cos(rot);
   dir.y = -sin(rot); //play with these to really screw things up
   plane.x = sin(rot);
@@ -123,7 +132,8 @@ function update() {
     rot -= rotSpeed;
   }
 
-  if (keyIsDown(UP_ARROW)) {
+  //up
+  if (keyIsDown(87)) {
     if (worldMap[floor(pos.x + dir.x * walkSpeed * 1.0)][floor(pos.y)] === 0) {
       pos.x += dir.x * walkSpeed * 1.0;
     }
@@ -132,12 +142,33 @@ function update() {
     }
   }
 
-  if (keyIsDown(DOWN_ARROW)) {
+  //down
+  if (keyIsDown(83)) {
     if (worldMap[floor(pos.x - dir.x * walkSpeed * 1.0)][floor(pos.y)] === 0) {
       pos.x -= dir.x * walkSpeed * 1.0;
     }
     if (worldMap[floor(pos.x)][floor(pos.y - dir.y * walkSpeed * 1.0)] === 0) {
       pos.y -= dir.y * walkSpeed * 1.0;
+    }
+  }
+
+  //left
+  if (keyIsDown(65)) {
+    if (worldMap[floor(pos.x - plane.x * walkSpeed * 1.0)][floor(pos.y)] === 0) {
+      pos.x -= plane.x * walkSpeed * 1.0;
+    }
+    if (worldMap[floor(pos.x)][floor(pos.y - plane.y * walkSpeed * 1.0)] === 0) {
+      pos.y -= plane.y * walkSpeed * 1.0;
+    }
+  }
+
+  //right
+  if (keyIsDown(68)) {
+    if (worldMap[floor(pos.x + plane.x * walkSpeed * 1.0)][floor(pos.y)] === 0) {
+      pos.x += plane.x * walkSpeed * 1.0;
+    }
+    if (worldMap[floor(pos.x)][floor(pos.y + plane.y * walkSpeed * 1.0)] == 0) {
+      pos.y += plane.y * walkSpeed * 1.0;
     }
   }
 }
@@ -248,9 +279,9 @@ function raycast() {
         for (var moreY = y; moreY < y + YSKIP; moreY++) {
           var pixelPos = (PIXELWIDTH * (moreY + floor(startY)) + moreX) * 4;
           // if (pixelPos < pixels.length && pixelPos >= 0) {
-          pixels[pixelPos] = c;
-          pixels[pixelPos + 1] = 150; //map((moreY - y), 0, YSKIP, 0, 255);
-          pixels[pixelPos + 2] = 0; //map((moreX - x), 0, XSKIP, 0, 255);
+          pixels[pixelPos] = random(c);
+          pixels[pixelPos + 1] = random(150); //map((moreY - y), 0, YSKIP, 0, 255);
+          pixels[pixelPos + 2] = random(200); //map((moreX - x), 0, XSKIP, 0, 255);
           pixels[pixelPos + 3] = 255;
           // }
         }

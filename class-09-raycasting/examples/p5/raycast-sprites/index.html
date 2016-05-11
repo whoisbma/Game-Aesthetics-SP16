@@ -9,7 +9,23 @@
 
     <script src="sketch.js" type="text/javascript"></script>
 
-    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+    <style> 
+      body {
+        padding: 0; 
+        margin: 0;
+      } 
+      canvas {
+        vertical-align: top;
+        width: 640px !important;
+        height: 480px !important;
+        image-rendering: optimizeSpeed;             /* Older versions of FF          */
+        image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+        image-rendering: -webkit-optimize-contrast; /* Safari                        */
+        image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+        image-rendering: pixelated;                 /* Awesome future-browsers       */
+        -ms-interpolation-mode: nearest-neighbor;   /* IE   
+      } 
+    </style>
   </head>
   <body>
   </body>
